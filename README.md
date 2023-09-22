@@ -30,13 +30,12 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
   └── ...
   ```
 
-  **2. Frontend Development (React and Bootstrap):**
-      - Create a React frontend for your website. You can use create-react-app to bootstrap your project.
-      - Design and implement the website using Bootstrap for responsive design.
-      - Include a contact form component in your React application. You can use a form library like Formik for handling the contact form.
-      ```jsx
+**2. Frontend Development (React and Bootstrap):**
+  - Create a React frontend for your website. You can use create-react-app to bootstrap your project.
+  - Design and implement the website using Bootstrap for responsive design.
+  - Include a contact form component in your React application. You can use a form library like Formik for handling the contact form.
+```jsx
       // src/components/ContactForm.js
-
   import React from "react";
   import { useFormik } from "formik";
 
@@ -62,9 +61,7 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
   });
   },
   });
-
   return (
-
     <form onSubmit={formik.handleSubmit}>
     <label>
     Name:
@@ -99,10 +96,9 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
     </form>
     );
     }
-
   export default ContactForm;
+```
 
-  ```
 **2.1. Dockerize React Frontend:**
 Create a Dockerfile for your React frontend.
 
