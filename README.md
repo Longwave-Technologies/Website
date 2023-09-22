@@ -284,6 +284,8 @@ jobs:
 - Set up a CI/CD pipeline using GitHub Actions or another CI/CD tool of your choice.
 - Configure the pipeline to automatically build, test, and deploy your Docker containers whenever you push changes to your GitHub repository.
 - Set up environment variables for secrets like database credentials.
+- With this workflow in place, every time you push changes to your GitHub repository's main branch, GitHub Actions will automatically build and deploy your Golang backend and React frontend containers.
+Ensure you have proper access control and security measures in place for your hosting platforms.
 
 **8. Security and Secrets Management:**
 
