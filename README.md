@@ -36,7 +36,6 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
       - Include a contact form component in your React application. You can use a form library like Formik for handling the contact form.
       ```jsx
       // src/components/ContactForm.js
-      ````
 
   import React from "react";
   import { useFormik } from "formik";
@@ -104,9 +103,6 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
   export default ContactForm;
 
   ```
-
-  ````
-
 **2.1. Dockerize React Frontend:**
 Create a Dockerfile for your React frontend.
 
