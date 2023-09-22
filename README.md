@@ -245,6 +245,9 @@ Configure your React frontend to make API requests to the Golang backend using A
   - Use HTTPS for secure communication.
   - Validate and sanitize user inputs to prevent SQL injection and XSS attacks.
   - Set up a firewall and access control lists (ACLs) for Docker containers.
+  - Securing Docker: To secure Docker containers, you should follow best practices for container security. This includes regularly updating base images, minimizing the attack surface, using appropriate permissions, and more. Security practices might vary based on your deployment environment, so consult security guidelines for Docker in your specific context.
+
+Remember to secure your application further by handling user data responsibly, using HTTPS for communication, and implementing user authentication as needed.
 
 7. **Contact Form:**
 
