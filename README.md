@@ -33,7 +33,7 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
 **2. Frontend Development (React and Bootstrap):**
   - Create a React frontend for your website. You can use create-react-app to bootstrap your project.
   - Design and implement the website using Bootstrap for responsive design.
-  - Include a contact form component in your React application. You can use a form library like Formik for handling the contact form.
+  - Include a contact form component in your React application. You can use a form library like Formik or react-hook-form for handling the contact form.
 ```jsx
       // src/components/ContactForm.js
   import React from "react";
@@ -235,8 +235,59 @@ Configure your React frontend to make API requests to the Golang backend using A
 **5.2 Docker Compose:**
   Create a `docker-compose.yml` file that defines how your services (frontend, backend, and database) interact with each other.
 
-6. **Security Measures:**
+**6. Configure GitHub Secrets:**
 
+In your GitHub repository, go to "Settings" > "Secrets" and configure any secrets or environment variables needed for your CI/CD process (e.g., API keys, access tokens).
+
+**6.1 Create GitHub Actions Workflow:**
+
+Create a GitHub Actions workflow YAML file (e.g., .github/workflows/main.yml) to automate the CI/CD process. Here's an example workflow that builds and deploys both the Golang backend and React frontend:
+
+```.github/workflows/main.yml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build and Deploy Backend
+      run: |
+        docker build -t your-golang-backend ./backend
+        docker run -d -p 8080:8080 --name backend-container your-golang-backend
+        # Deploy to your hosting platform (e.g., AWS, GCP, or a VPS)
+
+    - name: Build and Deploy Frontend
+      run: |
+        docker build -t your-react-frontend ./frontend
+        docker run -d -p 80:80 --name frontend-container your-react-frontend
+        # Deploy to a web server or hosting platform
+
+    - name: Cleanup
+      run: |
+        docker stop backend-container
+        docker rm backend-container
+        docker stop frontend-container
+        docker rm frontend-container
+```
+ 
+**7. Continuous Integration/Continuous Deployment (CI/CD):**
+
+- Set up a CI/CD pipeline using GitHub Actions or another CI/CD tool of your choice.
+- Configure the pipeline to automatically build, test, and deploy your Docker containers whenever you push changes to your GitHub repository.
+- Set up environment variables for secrets like database credentials.
+
+**8. Security and Secrets Management:**
+
+- Use environment variables or a secrets management tool to store sensitive information such as database credentials securely.
 - Implement security best practices, including input validation, encryption (SSL/TLS), and protecting against common web vulnerabilities (e.g., SQL injection, XSS).
 - Ensure proper user authentication and authorization to protect sensitive data and functionality.
 - Implement security measures such as:
@@ -249,21 +300,8 @@ Configure your React frontend to make API requests to the Golang backend using A
 
 Remember to secure your application further by handling user data responsibly, using HTTPS for communication, and implementing user authentication as needed.
 
-7. **Contact Form:**
 
-- Implement a contact form on the frontend using a library like Formik or react-hook-form.
-- Create a backend API endpoint to handle form submissions and store them securely in the database.
-
-8. **Continuous Integration/Continuous Deployment (CI/CD):**
-
-- Set up a CI/CD pipeline using GitHub Actions or another CI/CD tool of your choice.
-- Configure the pipeline to automatically build, test, and deploy your Docker containers whenever you push changes to your GitHub repository.
-
-8. **Security and Secrets Management:**
-
-- Use environment variables or a secrets management tool to store sensitive information such as database credentials securely.
-
-9. **Domain and SSL Certificate:**
+**9. Domain and SSL Certificate:**
 
 - Purchase a domain for your business website and configure DNS settings.
 - Obtain and install an SSL certificate for secure communication.
