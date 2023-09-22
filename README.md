@@ -1,6 +1,6 @@
 # Website
 
-Creating a complete secured business website with Docker, Golang, React, Bootstrap, PostgreSQL, and a contact form with CI/CD on GitHub is a complex task, and providing a full code example in a single response may not be feasible. However, I can give you a high-level overview of the components and steps involved, and you can find relevant code examples and tutorials on GitHub and various programming forums. Here's a simplified outline of the architecture and steps:
+Creating a complete secured business website with Docker, Golang, React, Bootstrap, PostgreSQL, and a contact form with CI/CD on GitHub.Here's an outline of the architecture and steps:
 
 **1. Set Up the Development Environment:**
 
