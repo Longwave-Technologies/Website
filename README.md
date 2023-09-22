@@ -159,13 +159,7 @@ CMD ["npm", "start"]
   }
   ```
 
-4. **Database (PostgreSQL):**
-
-- Set up a PostgreSQL database to store your website's data securely.
-- Define the database schema and create tables to store information such as user data, contact form submissions, etc.
-  Backend (Golang and PostgreSQL):\*\*
-
-**4.1. Dockerize Golang Backend:**
+**3.1. Dockerize Golang Backend:**
 Create a Dockerfile for your Go backend, specifying the required dependencies and build steps. You'll also need a Docker Compose file to set up your PostgreSQL database.
 
 Dockerfile (for Go):
@@ -190,7 +184,12 @@ EXPOSE 8080
 CMD ["./main"]
 ```
 
-Docker Compose file (for PostgreSQL):
+**4. Database (PostgreSQL):**
+
+- Set up a PostgreSQL database to store your website's data securely.
+- Define the database schema and create tables to store information such as user data, contact form submissions, etc.
+  
+**4.1 Docker Compose file (for PostgreSQL):**
 
 ```yaml
 version: "3.1"
@@ -214,40 +213,10 @@ Configure your React frontend to make API requests to the Golang backend using A
 
 **5.1 Dockerization:**
 
-- Create Dockerfiles for both the frontend (React) and backend (Golang) applications.
-```frontend/Dockerfile
-
-FROM node:latest
-
-WORKDIR /app
-
-COPY package\*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
-```
-
-```backend/Dockerfile
-
-FROM golang:latest
-
-WORKDIR /app
-
-COPY . .
-
-RUN go build -o main .
-
-EXPOSE 8080
-
-CMD ["./main"]
-```
+- Ensure you created Dockerfiles for both the frontend (React) and backend (Golang) applications as shown above.
 
 - Use Docker Compose to define your multi-container application, including PostgreSQL as a container.
+
 **5.2 Docker Compose:**
   Create a `docker-compose.yml` file that defines how your services (frontend, backend, and database) interact with each other.
 
