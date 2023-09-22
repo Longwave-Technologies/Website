@@ -185,11 +185,26 @@ CMD ["./main"]
 ```
 
 **4. Database (PostgreSQL):**
-
 - Set up a PostgreSQL database to store your website's data securely.
 - Define the database schema and create tables to store information such as user data, contact form submissions, etc.
   
 **4.1 Docker Compose file (for PostgreSQL):**
+  - Use Docker Compose to manage both containers and link them together. Create a docker-compose.yml file:
+```docker-compose.yml
+version: "3"
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+```
+or 
 
 ```yaml
 version: "3.1"
