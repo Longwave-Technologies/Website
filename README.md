@@ -130,9 +130,6 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-**2.2. Create React Frontend:**
-Build your React frontend, design the user interface, and include a contact form using Bootstrap for styling.
-
 **3. Backend Development (Golang):**
 
 - Create a Go backend server to handle API requests and interact with the database.
@@ -218,9 +215,7 @@ Configure your React frontend to make API requests to the Golang backend using A
 **5.1 Dockerization:**
 
 - Create Dockerfiles for both the frontend (React) and backend (Golang) applications.
-  ```frontend/Dockerfile
-  # frontend/Dockerfile
-  ```
+```frontend/Dockerfile
 
 FROM node:latest
 
@@ -235,11 +230,9 @@ COPY . .
 EXPOSE 3000
 
 CMD ["npm", "start"]
+```
 
-````
-
-```Backend Dockerfile
-# backend/Dockerfile
+```backend/Dockerfile
 
 FROM golang:latest
 
@@ -252,11 +245,10 @@ RUN go build -o main .
 EXPOSE 8080
 
 CMD ["./main"]
-
-````
+```
 
 - Use Docker Compose to define your multi-container application, including PostgreSQL as a container.
-  **5.2 Docker Compose:**
+**5.2 Docker Compose:**
   Create a `docker-compose.yml` file that defines how your services (frontend, backend, and database) interact with each other.
 
 6. **Security Measures:**
