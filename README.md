@@ -31,72 +31,74 @@ Creating a complete secured business website with Docker, Golang, React, Bootstr
   ```
 
 **2. Frontend Development (React and Bootstrap):**
-  - Create a React frontend for your website. You can use create-react-app to bootstrap your project.
-  - Design and implement the website using Bootstrap for responsive design.
-  - Include a contact form component in your React application. You can use a form library like Formik or react-hook-form for handling the contact form.
-```jsx
-      // src/components/ContactForm.js
-  import React from "react";
-  import { useFormik } from "formik";
 
-  function ContactForm() {
+- Create a React frontend for your website. You can use create-react-app to bootstrap your project.
+- Design and implement the website using Bootstrap for responsive design.
+- Include a contact form component in your React application. You can use a form library like Formik or react-hook-form for handling the contact form.
+
+```jsx
+// src/components/ContactForm.js
+import React from "react";
+import { useFormik } from "formik";
+
+function ContactForm() {
   const formik = useFormik({
-  initialValues: {
-  name: "",
-  email: "",
-  message: "",
-  },
-  onSubmit: (values) => {
-  // Send form data to the backend API
-  fetch("/api/contact", {
-  method: "POST",
-  headers: {
-  "Content-Type": "application/json",
-  },
-  body: JSON.stringify(values),
-  })
-  .then((response) => response.json())
-  .then((data) => {
-  // Handle the response, show success or error messages to the user
-  });
-  },
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    onSubmit: (values) => {
+      // Send form data to the backend API
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Handle the response, show success or error messages to the user
+        });
+    },
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-    <label>
-    Name:
-    <input
-             type="text"
-             name="name"
-             onChange={formik.handleChange}
-             value={formik.values.name}
-          />
-    </label>
-    <br />
-    <label>
-    Email:
-    <input
-             type="email"
-             name="email"
-             onChange={formik.handleChange}
-             value={formik.values.email}
-          />
-    </label>
-    <br />
-    <label>
-    Message:
-    <textarea
-             name="message"
-             onChange={formik.handleChange}
-             value={formik.values.message}
-          />
-    </label>
-    <br />
-    <button type="submit">Submit</button>
+      <label>
+        Name:
+        <input
+          type="text"
+          name="name"
+          onChange={formik.handleChange}
+          value={formik.values.name}
+        />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input
+          type="email"
+          name="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
+      </label>
+      <br />
+      <label>
+        Message:
+        <textarea
+          name="message"
+          onChange={formik.handleChange}
+          value={formik.values.message}
+        />
+      </label>
+      <br />
+      <button type="submit">Submit</button>
     </form>
-    );
-    }
-  export default ContactForm;
+  );
+}
+export default ContactForm;
 ```
 
 **2.1. Dockerize React Frontend:**
@@ -185,11 +187,14 @@ CMD ["./main"]
 ```
 
 **4. Database (PostgreSQL):**
+
 - Set up a PostgreSQL database to store your website's data securely.
 - Define the database schema and create tables to store information such as user data, contact form submissions, etc.
-  
+
 **4.1 Docker Compose file (for PostgreSQL):**
-  - Use Docker Compose to manage both containers and link them together. Create a docker-compose.yml file:
+
+- Use Docker Compose to manage both containers and link them together. Create a docker-compose.yml file:
+
 ```docker-compose.yml
 version: "3"
 services:
@@ -204,7 +209,8 @@ services:
     ports:
       - "3000:3000"
 ```
-or 
+
+or
 
 ```yaml
 version: "3.1"
@@ -233,7 +239,7 @@ Configure your React frontend to make API requests to the Golang backend using A
 - Use Docker Compose to define your multi-container application, including PostgreSQL as a container.
 
 **5.2 Docker Compose:**
-  Create a `docker-compose.yml` file that defines how your services (frontend, backend, and database) interact with each other.
+Create a `docker-compose.yml` file that defines how your services (frontend, backend, and database) interact with each other.
 
 **6. Configure GitHub Secrets:**
 
@@ -278,14 +284,14 @@ jobs:
         docker stop frontend-container
         docker rm frontend-container
 ```
- 
+
 **7. Continuous Integration/Continuous Deployment (CI/CD):**
 
 - Set up a CI/CD pipeline using GitHub Actions or another CI/CD tool of your choice.
 - Configure the pipeline to automatically build, test, and deploy your Docker containers whenever you push changes to your GitHub repository.
 - Set up environment variables for secrets like database credentials.
 - With this workflow in place, every time you push changes to your GitHub repository's main branch, GitHub Actions will automatically build and deploy your Golang backend and React frontend containers.
-Ensure you have proper access control and security measures in place for your hosting platforms.
+  Ensure you have proper access control and security measures in place for your hosting platforms.
 
 **8. Security and Secrets Management:**
 
@@ -301,7 +307,6 @@ Ensure you have proper access control and security measures in place for your ho
   - Securing Docker: To secure Docker containers, you should follow best practices for container security. This includes regularly updating base images, minimizing the attack surface, using appropriate permissions, and more. Security practices might vary based on your deployment environment, so consult security guidelines for Docker in your specific context.
 
 Remember to secure your application further by handling user data responsibly, using HTTPS for communication, and implementing user authentication as needed.
-
 
 **9. Domain and SSL Certificate:**
 
@@ -327,3 +332,5 @@ Please note that creating such a project is a significant undertaking and would 
 # References
 
 - [How to deploy React App to GitHub Pages](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
+- [React dependencies error](https://www.freecodecamp.org/news/error-error-0308010c-digital-envelope-routines-unsupported-node-error-solved/)
+- [Import Babel devDependencies error](https://stackoverflow.com/questions/76435306/babel-preset-react-app-is-importing-the-babel-plugin-proposal-private-propert)
