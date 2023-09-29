@@ -1,13 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Header from './assets/js/components/Header';
+// import Banner from './components/Banner';
+// import Services from './components/Services';
+// import Products from './components/Products';
+// import Contact from './components/Contact';
 
 function App() {
   return (
     <div className="App">
+      <Header />
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+
         </p>
         <a
           className="App-link"
@@ -18,6 +25,11 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* <Banner />
+      <Services />
+      <Products />
+      <Contact /> */}
     </div>
   );
 }
