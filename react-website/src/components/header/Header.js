@@ -1,6 +1,7 @@
 // Header.js
 import React from 'react';
-import logo from '../images/logo final animation.svg';
+import logo from '../../assets/images/logoFinalAnimation.svg';
+import './Header.css';
 
 function Header() {
   return (

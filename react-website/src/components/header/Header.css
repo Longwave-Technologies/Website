@@ -1,0 +1,14 @@
+/* Header.css */
+
+.header {
+    background-color: #FFF;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    margin: 0;
+  }
+  
