@@ -2,9 +2,9 @@
 
 Creating a complete secured business website with Docker, Golang, React, Bootstrap, PostgreSQL, and a contact form with CI/CD on GitHub.
 
-Deploy and update on the server: ```npm run deploy```
+Deploy and update on the server: `npm run deploy`
 
-Deploy locally: ```npm start```
+Deploy locally: `npm start`
 
 Here's an outline of the architecture and steps:
 
@@ -28,13 +28,61 @@ Here's an outline of the architecture and steps:
   │   ├── Dockerfile
   │   ├── src/
   │   │   ├── components/
-  │   │   ├── App.js
+  │   │   │   └──(Common components used across different pages)
+  │   │   ├── App.js (Main application component)
+  │   │   ├── index.js (Entry point of the application)
+  │   │   ├── pages/
+  │   │   │   ├── Page1/
+  │   │   │   │   ├── Page1.js (React component)
+  │   │   │   │   ├── Page1.css (Styles specific to Page1)
+  │   │   │   ├── Page2/
+  │   │   │   │   ├── Page2.js (React component)
+  │   │   │   │   ├── Page2.css (Styles specific to Page2)
+  │   │   │   └── ...
+  │   │   ├── routes
+  │   │   │   └── AppRouter.js (Handles routing between pages)
+  │   │   ├── assets
+  │   │   │   └── Images, fonts, and other assets
+  │   │   ├── styles
+  │   │   │   └── Global styles, variables, and mixins
+  │   │   ├── utils
+  │   │   │   └── Utility functions, helper classes, and constants
+  │   │   ├── context
+  │   │   │   └── React context providers (if using context API)
+  │   │   ├── hooks
+  │   │   │   └── Custom React hooks
+  │   │   ├── config
+  │   │   │   └── Configuration files (e.g., API endpoints, environment variables)
   │   │   └── ...
   │   └── ...
   │
   ├── docker-compose.yml
   └── ...
   ```
+
+  Here are some best modular practices to follow for multiple React pages:
+
+  1. **Separation of Concerns:** Each component should focus on a specific concern. For example, keep business logic, UI, and styles separate. This makes it easier to maintain and reuse components.
+
+  2. **Page Components:** Create a separate directory for each page of your application. Each page directory contains the React component for that page along with any styles specific to that page. This helps in keeping code related to a specific page organized.
+
+  3. **Reusable Components:** Place common and reusable components in the `/components` directory. These can be components used across different pages, such as navigation bars, buttons, or form inputs.
+
+  4. **Routing:** Use a routing library like React Router to handle navigation between different pages. Place your routing configuration in the `/routes` directory. The `AppRouter.js` file can define your application's routes.
+
+  5. **Assets:** Store images, fonts, and other assets in the `/assets` directory. Keep the file structure organized to make it easy to reference these assets in your code.
+
+  6. **Styles:** Store global styles, variables, and mixins in the `/styles` directory. Each page or component can have its own CSS or CSS-in-JS file to manage specific styles.
+
+  7. **Utilities and Helpers:** Place utility functions, helper classes, and constants in the `/utils` directory. These can be used across different parts of your application.
+
+  8. **Context and Hooks:** If you're using React context API or custom hooks, organize them in the `/context` and `/hooks` directories, respectively.
+
+  9. **Configuration:** Keep configuration files like API endpoints or environment variables in the `/config` directory.
+
+  10. **Main Entry Point:** The `App.js` file serves as the main entry point of your application. It should handle routing and the overall structure of your app. The `index.js` file is the entry point for rendering your React application.
+
+  By following these best modular practices and maintaining a clear directory structure, you'll make it easier to collaborate with team members, scale your project, and maintain code quality in your React frontend application.
 
 **2. Frontend Development (React and Bootstrap):**
 
