@@ -1,14 +1,58 @@
-/* Header.css */
-
+/* Reset default margin and padding for the header */
+header {
+  margin: 0;
+  padding: 0;
+}
+/* Style for the header element */
 .header {
+    margin: 10;
+    padding: 10;
     background-color: #FFF;
-    color: #fff;
-    padding: 10px;
+    display: flex;
+    align-items: left; /* Vertically center content */
+    justify-content: space-between; /* Space between tabs and logo */
     text-align: center;
+    margin-right: 20px; /* Add space between tabs */
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+/* Style for the logo */
+.logo {
+  display: flex;
+  align-items: left;
+  list-style: none;
+  width: 180px; /* Set your desired width */
+  height: auto; /* Let the height adjust proportionally */
+  margin: 30px;
+}
+  
+  .tabs {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .tabs li {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
   }
   
-  .header-title {
-    font-size: 24px;
-    margin: 0;
+  .tab {
+    cursor: pointer;
+    transition: color 0.3s;
   }
+  
+  .tab:hover {
+    color: #3498db; /* Change the color on hover */
+  }
+  
+  .tab.active {
+    color: #3498db; /* Color for the active tab */
+    font-weight: bold;
+  }
+  
   
