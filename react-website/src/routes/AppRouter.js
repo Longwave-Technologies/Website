@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate  } from 'react-router-dom';
 import Home from '../pages/homePage/HomePage';
 import Header from '../components/header/Header';
 import Services from '../pages/servicePage/ServicePage';
@@ -20,13 +20,13 @@ function AppRouter() {
         <Router>
         <div className="AppRouter">
           <Header tabsData={tabsData} />
-        {/* <Routes>
-        <Route path="/" exact component={Home} />
-        <Route path="/services" component={Services} />
-        <Route path="/products" component={Products} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/about" component={About} />
-        </Routes> */}
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        </Routes>
         </div>
     </Router>
   

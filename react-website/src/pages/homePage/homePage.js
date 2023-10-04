@@ -2,10 +2,10 @@ import React from 'react';
 
 function HomePage () {
   return (
-    <div>
+    // <div>
       <h2>Home</h2>
-      <p>Welcome to the Home page.</p>
-    </div>
+      // <p>Welcome to the Home page.</p>
+    // </div>
   );
 };
 
