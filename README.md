@@ -391,3 +391,4 @@ Please note that creating such a project is a significant undertaking and would 
 - [React dependencies error](https://www.freecodecamp.org/news/error-error-0308010c-digital-envelope-routines-unsupported-node-error-solved/)
 - [Import Babel devDependencies error](https://stackoverflow.com/questions/76435306/babel-preset-react-app-is-importing-the-babel-plugin-proposal-private-propert)
 - [Properly name repo to host on Github Pages](https://kinsta.com/blog/github-pages/)
+- [Animated Logo Preloader](https://ihatetomatoes.net/create-css3-spinning-preloader/)
