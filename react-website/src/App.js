@@ -6,32 +6,28 @@ import LoadingScreen from './pages/loadingScreen/LoadingScreen';
 import HomePage from './pages/homePage/HomePage';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const isHomePage = '/';
-  const currentPath = window.location.pathname;
-  const isMatchingPath = currentPath === isHomePage;
-
-  //In index.js and App.js, add logic to determine whether the animation should be applied initially or when the website is still loading. You can use a state variable and the localStorage API for this purpose.
-  const isWebsiteLoading = localStorage.getItem('isWebsiteLoading');
-
+  const [isLoading, setIsLoading] = useState(localStorage.getItem('isWebsiteLoading') === 'true');
 
   useEffect(() => {
-    console.log('isLoading:', isLoading,isWebsiteLoading);
-    // Check if the website is still loading (e.g., by checking a flag in localStorage)
+    //In index.js and App.js, add logic to determine whether the animation should be applied initially (isWebsiteLoading) or when the website is still loading. You can use a state variable and the localStorage API for this purpose.
+    // Check if the website is still loading using localStorage
+    const isWebsiteLoading = localStorage.getItem('isWebsiteLoading'); //animation should be applied initially 
+    console.log('BEFORE: isLoading, isWebsiteLoading:', isLoading,isWebsiteLoading );
 
-    if (isWebsiteLoading === 'true') {
-    // If it's still loading, add the class to trigger the animation
-      setIsLoading(true);
-    
+      // Add an event listener to the window's load event
+      window.addEventListener('load', () => {
       // After the animation, set the flag to indicate it's not loading anymore
-      setTimeout(() => {
-        setIsLoading(false);
-        localStorage.setItem('isWebsiteLoading', 'false');
-    }, 4100);
-   } else {
-      setIsLoading(false);
-    }; // Simulate a 2-second loading time
+        setTimeout(() => {
+          localStorage.setItem('isWebsiteLoading', 'false');
+          setIsLoading(false);
+        }, 4100); // Simulate a 4-second loading time   
+      });
+    console.log('AFTER: isLoading, isWebsiteLoading:', isLoading,isWebsiteLoading );
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('load', () => {});
+    };
   }, []);
 
 
@@ -40,7 +36,7 @@ function App() {
     <div className="App">
 
       { isLoading ? <LoadingScreen /> : (
-       console.log('AppRouter displayed'+ isMatchingPath),
+       console.log('AppRouter displayed'),
         <AppRouter />
       )
       }
