@@ -8,12 +8,14 @@ import Contact from '../pages/contactPage/ContactPage';
 import About from '../pages/aboutPage/AboutPage';
 
 const tabsData = [
-    { label: 'Home', path: '/' },
-    { label: 'Services', path: '/services' },
+    { label: 'Home', path: '/'},
+    { label: 'Services', path: '/services'},
     { label: 'Products', path: '/products' },
     { label: 'Contact', path: '/contact' },
-    { label: 'About', path: '/about' },
+    { label: 'About', path: '/about'},
   ];
+
+
 
 function AppRouter() {
     return (
@@ -21,7 +23,7 @@ function AppRouter() {
         <div className="AppRouter">
           <Header tabsData={tabsData} />
         <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />

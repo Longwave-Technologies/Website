@@ -4,8 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// add logic to determine whether the animation should be applied initially or when the website is still loading. You can use a state variable and the localStorage API for this purpose.
+// Set the localStorage flag to 'true' when the website loads for the first time or after a refresh
+if (!localStorage.getItem('isWebsiteLoading')) {
+  localStorage.setItem('isWebsiteLoading', 'true');
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <App />

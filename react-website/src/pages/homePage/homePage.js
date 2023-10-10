@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 
-function HomePage () {
+function HomePage ({ isHomePage, setIsHomePage }) {
+
+
+  
+  
   return (
-    // <div>
-      <h2>Home</h2>
-      // <p>Welcome to the Home page.</p>
-    // </div>
+    
+    <div>
+       <h2>Home</h2>
+
+    </div>
   );
 };
 

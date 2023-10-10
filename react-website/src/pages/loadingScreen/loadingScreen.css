@@ -16,14 +16,13 @@
     position: absolute;
     animation: moveLogo 10s ;
 
-
   }
 
   .introSVG{
        pointer-events: none;
        position: absolute;
        animation: moveLogo 30s ;
-       
+
   }
   
   @keyframes moveLogo {
