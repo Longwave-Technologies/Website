@@ -15,23 +15,20 @@ const tabsData = [
     { label: 'About', path: '/about'},
   ];
 
-
-
 function AppRouter() {
     return (
-        <Router>
-        <div className="AppRouter">
-          <Header tabsData={tabsData} />
+      <div className="app-container">
+      <Router>
+        <Header tabsData={tabsData} />
         <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
+          <Route path="/" exact element={<Home />}  />
+          <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
-        </div>
-    </Router>
-  
+      </Router>
+      </div>
     );
   }
   

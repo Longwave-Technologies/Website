@@ -4,6 +4,7 @@ import AppRouter from './routes/AppRouter';
 import LoadingScreen from './pages/loadingScreen/LoadingScreen';
 import HomePage from './pages/homePage/HomePage';
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(localStorage.getItem('isWebsiteLoading') === 'true');
   //In index.js and App.js, add logic to determine whether the animation should be applied initially (isWebsiteLoading) or when the website is still loading. You can use a state variable and the localStorage API for this purpose.
@@ -36,7 +37,7 @@ function App() {
   }, [isLoading, isWebsiteLoading]);
 
   return (
-    <div className="App">
+    <div className="App"> 
       { isLoading ? <LoadingScreen /> : (
         console.log('AppRouter displayed'),
         <AppRouter />

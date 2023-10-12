@@ -1,17 +1,12 @@
 import React, { useState, useEffect }  from 'react';
+import parallaxImg from '../../assets/images/home-parallax-background.png';
 
-function HomePage ({ isHomePage, setIsHomePage }) {
-
-
-  
-  
+function HomePage () {
   return (
-    
-    <div>
-       <h2>Home</h2>
-
+    <div className="content" id="content" >
+      <h1>header</h1>
+      <img src={parallaxImg} className='parallaxImg' alt='parallaxImg'></img>
     </div>
   );
 };
-
 export default HomePage;

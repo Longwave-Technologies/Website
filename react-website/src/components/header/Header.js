@@ -20,15 +20,13 @@ function Header({ tabsData }) {
       <ul className="tabs">
         {tabsData.map((tab, index) => (
           <li key={tab.label}>
-            <div className="tab" onClick={() => {handleTabClick(tab.path)}} style={activeTab === tab.path ? { backgroundColor: '#f0f0f0' } : {}}> 
+            <div className="tab" onClick={() => {handleTabClick(tab.path)}} style={activeTab === tab.path ? {color: '#159cf6' } : {}}> 
               {tab.label}
             </div>
           </li>
         ))}
 
       </ul>
-
-
     </div>
   );
 }

@@ -7,6 +7,18 @@ Deploy and update on the server: `npm run deploy`
 
 Deploy locally: `npm start`
 
+Proper git development: https://medium.com/@anjulapaulus_84798/beginners-guide-to-proper-git-workflow-35a2d967734e
+  ```
+  git checkout master
+  git checkout -b develop
+  git checkout -b feature/feature-name
+  #After the feature development is done
+  git checkout develop
+  git merge feature/feature-name
+  git checkout master
+  git merge feature/feature-name
+  git branch -d feature/feature-name
+  ```
 Here's an outline of the architecture and steps:
 
 **1. Set Up the Development Environment:**

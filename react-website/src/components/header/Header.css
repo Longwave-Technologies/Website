@@ -1,20 +1,18 @@
-/* Reset default margin and padding for the header */
-header {
-  margin: 0;
-  padding: 0;
-}
+
 /* Style for the header element */
 .header {
-    margin: 10;
-    padding: 10;
-    background-color: #FFF;
-    display: flex;
-    align-items: left; /* Vertically center content */
-    justify-content: space-between; /* Space between tabs and logo */
-    text-align: center;
-    margin-right: 20px; /* Add space between tabs */
-    max-width: 100%;
-    height: auto;
+  position: fixed;
+  top:0;
+  background-color: #FFF;
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space between tabs and logo */
+  text-align: center;
+  width: 100%;
+  height: auto;
+  z-index: 100; /* Ensures the header is displayed above other content */
+  margin-bottom: 2000px;
+  
   }
 
   
@@ -25,18 +23,24 @@ header {
   list-style: none;
   width: 180px; /* Set your desired width */
   height: auto; /* Let the height adjust proportionally */
-  margin: 30px;
+  margin: 10px;
+  padding: 10px;
 }
   
   .tabs {
     display: flex;
+    align-items: right;
     gap: 20px;
     list-style: none;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
   }
 
   .tabs li {
-    margin-right: 20px;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-items: right;
     text-decoration: none;
     font-weight: bold;
   }
@@ -44,14 +48,15 @@ header {
   .tab {
     cursor: pointer;
     transition: color 0.3s;
+    
   }
   
   .tab:hover {
-    color: #3498db; /* Change the color on hover */
+    color: #87a8da; /* Change the color on hover */
   }
   
   .tab.active {
-    color: #3498db; /* Color for the active tab */
+    color: #159cf6; /* Color for the active tab */
     font-weight: bold;
   }
   
