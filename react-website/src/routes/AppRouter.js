@@ -6,6 +6,8 @@ import Services from '../pages/servicePage/ServicePage';
 import Products from '../pages/productPage/ProductPage';
 import Contact from '../pages/contactPage/ContactPage';
 import About from '../pages/aboutPage/AboutPage';
+import Footer from '../components/footer/Footer';
+
 
 const tabsData = [
     { label: 'Home', path: '/'},
@@ -27,6 +29,7 @@ function AppRouter() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer className='footer' />
       </Router>
       </div>
     );
