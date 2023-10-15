@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import parallaxImg from "../../assets/images/home-parallax-background.png";
+import parallaxImg from "../../assets/images/home/parallax-background.png";
 import "./HomePage.css";
 import "../../styles/styles.css";
 import ServicesInfo from "../../components/textAndImageList/TextAndImageList";
@@ -17,12 +17,7 @@ import xerox from "../../assets/images/brands/xerox.png";
 function HomePage() {
   return (
     <div className="content" id="content">
-      <div className="image-container">
-        <img
-          src={parallaxImg}
-          className="background-image"
-          alt="parallaxImg"
-        ></img>
+      <div className="parallax-container">
         <div className="text-overlay">
           <p>
             Going between digital and paper has never been easier. Longwave
