@@ -1,9 +1,14 @@
-
+@font-face {
+  font-family: Questrial;
+  src: url(/src/styles/font/Questrial-Regular.ttf) format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Style for the header element */
 .header {
   position: fixed;
-  top:0;
-  background-color: #FFF;
+  top: 0;
+  background-color: #fff;
   display: flex;
   align-items: center; /* Vertically center content */
   justify-content: space-between; /* Space between tabs and logo */
@@ -12,9 +17,9 @@
   height: auto;
   z-index: 100; /* Ensures the header is displayed above other content */
   margin-bottom: 0px;
-  }
+  font-family: Questrial, sans-serif;
+}
 
-  
 /* Style for the logo */
 .logo {
   display: flex;
@@ -25,38 +30,35 @@
   margin: 10px;
   padding: 10px;
 }
-  
-  .tabs {
-    display: flex;
-    align-items: right;
-    gap: 20px;
-    list-style: none;
-    margin: 10px;
-    padding: 10px;
-  }
 
-  .tabs li {
-    display: flex;
-    margin: 10px;
-    padding: 10px;
-    align-items: right;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .tab {
-    cursor: pointer;
-    transition: color 0.3s;
-    
-  }
-  
-  .tab:hover {
-    color: #87a8da; /* Change the color on hover */
-  }
-  
-  .tab.active {
-    color: #159cf6; /* Color for the active tab */
-    font-weight: bold;
-  }
-  
-  
+.tabs {
+  display: flex;
+  align-items: right;
+  gap: 20px;
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+.tabs li {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  align-items: right;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tab {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.tab:hover {
+  color: #87a8da; /* Change the color on hover */
+}
+
+.tab.active {
+  color: #159cf6; /* Color for the active tab */
+  font-weight: bold;
+}
