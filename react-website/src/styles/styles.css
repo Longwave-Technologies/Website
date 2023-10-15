@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Questrial;
+  src: url(/src/styles/font/Questrial-Regular.ttf) format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: Questrial, sans-serif;
+  font-weight: normal;
+}
+h2 {
+  font-family: Questrial, sans-serif;
+}
+p {
+  font-family: Questrial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}

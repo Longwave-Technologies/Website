@@ -1,14 +1,6 @@
-@font-face {
-  font-family: Questrial;
-  src: url(/src/styles/font/Questrial-Regular.ttf) format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .content {
   position: relative;
   margin-top: 100px;
-  font-family: Questrial, sans-serif;
 }
 
 .image-container {
@@ -24,29 +16,44 @@
 
 .text-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 70%;
-  height: 40%;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.3) 70%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  bottom: 15%;
+  width: 500px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
   color: #c9c9c9; /* Text color */
+  justify-content: left;
   text-align: justify;
-  line-height: 1.5;
-  justify-content: space-evenly;
-  padding: 10px;
+  padding: 10px 50px 10px 50px;
+  margin: auto;
 }
 
-.text-overlay p {
-  font-size: 24px;
-  padding: 20px;
+.brand-imgs-section {
+  text-align: center;
+  padding: 0px 100px 30px 100px;
+  text-align: center;
+  justify-content: center;
+}
+
+.brand-imgs {
+  height: 30px;
+  padding: 15px;
   flex-wrap: "hard";
   white-space: normal;
+  display: inline-grid;
+  place-items: center;
+  margin: 0 auto;
+}
+#brand-img-hp {
+  height: 50px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 400px) {
+  .text-overlay {
+    bottom: 5%;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 25px 5px 25px;
+  }
 }
