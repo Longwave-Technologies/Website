@@ -27,7 +27,7 @@ function App() {
 
         localStorage.setItem("isWebsiteLoading", "false");
         setIsLoading(false);
-      }, 4030); // Simulate a 4-second loading time
+      }, 3100); // Simulate a 3-second loading time
       // Remove the event listener
     };
 

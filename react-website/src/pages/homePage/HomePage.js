@@ -9,8 +9,8 @@ function HomePage () {
       <div className="image-container">
         <img src={parallaxImg} className='background-image' alt='parallaxImg'></img>
         <div className="text-overlay">
-          <p>Going between digital and paper has never been easier. <br/>
-             Longwave provides the perfect office imaging solution for your organization. <br/>
+          <p>Going between digital and paper has never been easier. 
+             Longwave provides the perfect office imaging solution for your organization. 
               We prioritize quality services and exceeding customer expectations.
           </p>
         </div>

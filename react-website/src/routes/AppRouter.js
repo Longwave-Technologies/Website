@@ -13,7 +13,6 @@ import Header from "../components/header/Header";
 import Services from "../pages/servicePage/ServicePage";
 import Products from "../pages/productPage/ProductPage";
 import Contact from "../pages/contactPage/ContactPage";
-import About from "../pages/aboutPage/AboutPage";
 import Footer from "../components/footer/Footer";
 
 const tabsData = [
@@ -21,7 +20,6 @@ const tabsData = [
   { label: "Services", path: "/services" },
   { label: "Products", path: "/products" },
   { label: "Contact", path: "/contact" },
-  { label: "About", path: "/about" },
 ];
 
 function AppRouter() {
@@ -39,8 +37,7 @@ function AppRouter() {
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+         </Routes>
         <Footer className="footer" />
       </Router>
     </div>
