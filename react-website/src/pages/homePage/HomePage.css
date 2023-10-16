@@ -170,13 +170,13 @@ ul {
 }
 #fpc_box:hover #fpc_corner-box {
   /* edit corner size (First animation, when the whole page is rollovered) */
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
 }
 #fpc_box div#fpc_corner-box:hover {
   /* edit corner size (Second animation, when the corner itself is rollovered) */
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
 }
 #fpc_corner-box:before {
   position: absolute;

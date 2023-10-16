@@ -27,9 +27,11 @@ const tabsData = [
 function AppRouter() {
   return (
     <div className="app-container">
-      <div class="dot3"></div>
-      <div class="dot2"></div>
-      <div class="dot1"></div>
+      <div className="app_background">
+        <div class="dot3"></div>
+        <div class="dot2"></div>
+        <div class="dot1"></div>
+      </div>
       <Router>
         <Header tabsData={tabsData} />
         <Routes>

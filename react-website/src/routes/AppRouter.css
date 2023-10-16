@@ -6,7 +6,11 @@
   justify-content: space-between;
   background: #9fccff;
 }
-
+.app_background {
+  height: 100%;
+  position: fixed;
+  top: -1000px;
+}
 .dot1 {
   height: 1500px;
   width: 1500px;
