@@ -94,6 +94,10 @@ function HomePage() {
       </div>
       <div className="information-section" id="About">
         <h1>Our Story</h1>
+        <h3>
+          We are passionate about partnering with good people and making their
+          life easier
+        </h3>
         <div className="information-section-grid">
           <img
             src={home_copier}
