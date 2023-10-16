@@ -14,9 +14,8 @@
   justify-content: space-between; /* Space between tabs and logo */
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 100px;
   z-index: 100; /* Ensures the header is displayed above other content */
-  margin-bottom: 0px;
   font-family: Questrial, sans-serif;
 }
 
@@ -27,23 +26,19 @@
   list-style: none;
   width: 180px; /* Set your desired width */
   height: auto; /* Let the height adjust proportionally */
-  margin: 10px;
-  padding: 10px;
+  margin: 30px;
 }
 
 .tabs {
-  display: flex;
   align-items: right;
   gap: 20px;
   list-style: none;
-  margin: 10px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 30px;
 }
 
 .tabs li {
-  display: flex;
-  margin: 10px;
-  padding: 10px;
   align-items: right;
   text-decoration: none;
   font-weight: bold;
@@ -51,14 +46,26 @@
 
 .tab {
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.2s;
+  color: rgb(67, 67, 67);
 }
 
 .tab:hover {
-  color: #87a8da; /* Change the color on hover */
+  color: #0c84f4; /* Change the color on hover */
 }
 
 .tab.active {
-  color: #159cf6; /* Color for the active tab */
+  color: #0c84f4; /* Color for the active tab */
   font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .logo {
+    display: flex;
+    align-items: left;
+    list-style: none;
+    width: 80px; /* Set your desired width */
+    height: auto; /* Let the height adjust proportionally */
+    margin: auto auto auto 10px;
+  }
 }
