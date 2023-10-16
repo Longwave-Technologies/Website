@@ -30,6 +30,10 @@
   padding: 10px 50px 10px 50px;
   margin: auto;
 }
+.text-overlay p {
+  font-size: 21px;
+}
+
 /*information section*/
 .information-section {
   margin-bottom: 50px;
