@@ -29,7 +29,7 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div className="information-section">
+      <div className="information-section" id="services-section">
         <h1>Services</h1>
         <div className="information-section-grid">
           <img
@@ -114,7 +114,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-      {/* <ServicesInfo className='servicesInfo' /> */}
 
       <div className="brands"></div>
       <div className="boost"></div>
