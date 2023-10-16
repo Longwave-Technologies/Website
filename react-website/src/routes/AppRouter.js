@@ -16,7 +16,7 @@ import Contact from "../pages/contactPage/ContactPage";
 import Footer from "../components/footer/Footer";
 
 const tabsData = [
-  { label: "Home", path: "/" },
+  // { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
   { label: "Products", path: "/products" },
   { label: "Contact", path: "/contact" },
