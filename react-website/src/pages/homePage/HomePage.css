@@ -50,6 +50,7 @@
 }
 .info-section-img {
   width: 400px;
+  filter: drop-shadow(6px 0px 6px rgba(47, 47, 47, 0.5));
 }
 .info-section-text-div {
   margin-bottom: 10px;
