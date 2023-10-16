@@ -1,18 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.00d5483d.css",
-    "main.js": "/static/js/main.c9b427de.js",
+    "main.css": "/static/css/main.4268fbbc.css",
+    "main.js": "/static/js/main.66475031.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
+    "static/media/technician.png": "/static/media/technician.966f1e2352f529c757ac.png",
     "static/media/parallax-background.png": "/static/media/parallax-background.91255f04f2e4e39c767e.png",
+    "static/media/konicaminolta.png": "/static/media/konicaminolta.b085000e697e8b95ef66.png",
     "static/media/Questrial-Regular.ttf": "/static/media/Questrial-Regular.8268e81790f4302669b7.ttf",
-    "static/media/logoFinalAnimation.svg": "/static/media/logoFinalAnimation.a705b9f6d314026ecb19cd2703df1bc6.svg",
+    "static/media/copier.png": "/static/media/copier.bcc447c5ae2deb8d1af8.png",
+    "static/media/canon.png": "/static/media/canon.71422765daafa3cc4dad.png",
+    "static/media/hp.png": "/static/media/hp.840aed0a02b22087a748.png",
+    "static/media/nec.png": "/static/media/nec.267087a396e2dd64821e.png",
+    "static/media/xerox.png": "/static/media/xerox.409e3cf1b4aa519003e7.png",
+    "static/media/toshiba.png": "/static/media/toshiba.47d28de99e2960deecd5.png",
+    "static/media/sharp.png": "/static/media/sharp.3f2a608a47bd21294c83.png",
+    "static/media/logoFinalAnimation.svg": "/static/media/logoFinalAnimation.9ee5ebc079e4427a58fb141476abdf1e.svg",
+    "static/media/kyocera.png": "/static/media/kyocera.5e2c2741fa8199d172ff.png",
+    "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
-    "main.00d5483d.css.map": "/static/css/main.00d5483d.css.map",
-    "main.c9b427de.js.map": "/static/js/main.c9b427de.js.map",
+    "main.4268fbbc.css.map": "/static/css/main.4268fbbc.css.map",
+    "main.66475031.js.map": "/static/js/main.66475031.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00d5483d.css",
-    "static/js/main.c9b427de.js"
+    "static/css/main.4268fbbc.css",
+    "static/js/main.66475031.js"
   ]
 }
