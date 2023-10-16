@@ -77,20 +77,19 @@ ul {
   height: 50px;
   padding-bottom: 5px;
 }
-.contact-button {
+.button {
   text-decoration: none;
   color: #000;
 }
 
-.contact-button:hover {
-  transform: scale(1.2);
+.button:hover {
   color: #0c84f4;
 }
 
 /*Contact Page Link corner page curl*/
 #fpc_effect-back {
   height: 200px;
-  background-color: #ffffff; /* some background color to match corner inside's */
+  background-color: #020101; /* some background color to match corner inside's */
   justify-content: center;
   margin: 0 auto;
 }

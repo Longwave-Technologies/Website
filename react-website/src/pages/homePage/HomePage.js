@@ -40,7 +40,7 @@ function HomePage() {
             <h2>Sales & Lease</h2>
             <ul classname="info-section-list">
               <li>New & refurbished multi-function printers (MFPs).</li>
-              <li>Color and Monochrome options</li>
+              <li>Color or Monochrome options</li>
               <li>Delivery & installation within the Tri-state area</li>
               <li>Flexible equipment rental agreements</li>
               <li>Original & generic parts and toner cartridges</li>
@@ -48,14 +48,16 @@ function HomePage() {
                 Security features, Fax Machine, and additional add-on options
               </li>
               <li>
-                <a>Click here to view our product offerings!</a>
+                <a className="button">
+                  <strong>Click here to view our product offerings!</strong>
+                </a>
               </li>
             </ul>
           </div>
           <div className="info-section-text-div">
             <h2>Repairs, Maintenance, & Supplies</h2>
             <ul classname="info-section-list">
-              <li> On-site troubleshooting & repairs</li>
+              <li>On-site troubleshooting & repairs</li>
               <li>Printer & Scanner set up for Windows & Mac</li>
               <li>Networking troubleshooting</li>
               <li>Remote troubleshooting </li>
@@ -93,7 +95,7 @@ function HomePage() {
         <div id="fpc_box">
           <div id="fpc_content">
             <a
-              className="contact-button"
+              className="button"
               href="https://longwave-technologies.github.io/contact"
             >
               <h1> Ready to boost your productivity?</h1>
