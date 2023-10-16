@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import parallaxImg from '../../assets/images/home-parallax-background.png';
+import parallaxImg from '../../assets/images/home/parallax-background.png';
 import './HomePage.css';
 import ServicesInfo from '../../components/textAndImageList/TextAndImageList';
 
