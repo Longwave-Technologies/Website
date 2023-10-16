@@ -46,8 +46,29 @@ function HomePage() {
           <img src={toshiba} className="brand-imgs" alt="brand img"></img>
         </div>
       </div>
-      <div className="contact-page-button-section">
-        <a className="contact-page-button">Ready to boost your productivity?</a>
+      <div className="contact-page-button-section" id="fpc_effect-back">
+        <div id="fpc_box">
+          <div id="fpc_content">
+            <a
+              className="contact-button"
+              href="https://longwave-technologies.github.io/contact"
+            >
+              <h1> Ready to boost your productivity?</h1>
+              <h3> Click here</h3>
+            </a>
+          </div>
+          <div id="fpc_corner-box">
+            <a id="fpc_page-tip" href="#">
+              <div id="fpc_corner-contents">
+                {/* 
+                <div id="fpc_corner-button">
+                  <strong>Click here </strong> to contact us
+                </div> 
+                */}
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       {/* <ServicesInfo className='servicesInfo' /> */}
 

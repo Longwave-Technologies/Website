@@ -4,18 +4,23 @@
   font-weight: normal;
   font-style: normal;
 }
-h1 {
+h1,
+h2,
+h3 {
   font-family: Questrial, sans-serif;
   font-weight: normal;
 }
-h2 {
-  font-family: Questrial, sans-serif;
-}
+
 p {
   font-family: Questrial, sans-serif;
   font-size: 20px;
   line-height: 1.5;
 }
+
+a:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 400px) {
   h1 {
     font-size: 20px;
