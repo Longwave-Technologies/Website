@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import parallaxImg from "../../assets/images/home/parallax-background.png";
 import "./HomePage.css";
 import "../../styles/styles.css";
+import { Link } from "react-router-dom";
 import ServicesInfo from "../../components/textAndImageList/TextAndImageList";
 import canon from "../../assets/images/brands/canon.png";
 import brother from "../../assets/images/brands/brother.png";
@@ -92,26 +93,24 @@ function HomePage() {
         </div>
       </div>
       <div id="fpc_effect-back">
+        <Link className="button" to="/Contact"></Link>
         <div id="fpc_box">
           <div id="fpc_content">
-            <a
-              className="button"
-              href="https://longwave-technologies.github.io/contact"
-            >
+            <Link className="button" to="/Contact">
               <h1> Ready to boost your productivity?</h1>
               <h3> Click here</h3>
-            </a>
+            </Link>
           </div>
           <div id="fpc_corner-box">
-            <a id="fpc_page-tip" href="#">
+            <div id="fpc_page-tip">
               <div id="fpc_corner-contents">
-                {/* 
+                {/* If you want to add text behind the paper curl
                 <div id="fpc_corner-button">
                   <strong>Click here </strong> to contact us
                 </div> 
                 */}
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

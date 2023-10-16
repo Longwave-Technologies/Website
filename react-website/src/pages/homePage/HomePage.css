@@ -85,6 +85,9 @@ ul {
   text-decoration: none;
   color: #000;
 }
+.button:hover {
+  color: #0c84f4;
+}
 
 /*Contact Page Link corner page curl*/
 #fpc_effect-back {
