@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4268fbbc.css",
-    "main.js": "/static/js/main.8fca0ecd.js",
+    "main.css": "/static/css/main.09a2ef34.css",
+    "main.js": "/static/js/main.ac12cbef.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/technician.png": "/static/media/technician.966f1e2352f529c757ac.png",
     "static/media/customer.png": "/static/media/customer.2f2fa56ea3446a8347cc.png",
@@ -15,16 +15,16 @@
     "static/media/xerox.png": "/static/media/xerox.409e3cf1b4aa519003e7.png",
     "static/media/toshiba.png": "/static/media/toshiba.47d28de99e2960deecd5.png",
     "static/media/sharp.png": "/static/media/sharp.3f2a608a47bd21294c83.png",
-    "static/media/logoFinalAnimation.svg": "/static/media/logoFinalAnimation.9ee5ebc079e4427a58fb141476abdf1e.svg",
+    "static/media/logoFinalAnimation.svg": "/static/media/logoFinalAnimation.a705b9f6d314026ecb19cd2703df1bc6.svg",
     "static/media/kyocera.png": "/static/media/kyocera.5e2c2741fa8199d172ff.png",
     "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
-    "main.4268fbbc.css.map": "/static/css/main.4268fbbc.css.map",
-    "main.8fca0ecd.js.map": "/static/js/main.8fca0ecd.js.map",
+    "main.09a2ef34.css.map": "/static/css/main.09a2ef34.css.map",
+    "main.ac12cbef.js.map": "/static/js/main.ac12cbef.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4268fbbc.css",
-    "static/js/main.8fca0ecd.js"
+    "static/css/main.09a2ef34.css",
+    "static/js/main.ac12cbef.js"
   ]
 }
