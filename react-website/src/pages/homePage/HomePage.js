@@ -13,6 +13,8 @@ import nec from "../../assets/images/brands/nec.png";
 import sharp from "../../assets/images/brands/sharp.png";
 import toshiba from "../../assets/images/brands/toshiba.png";
 import xerox from "../../assets/images/brands/xerox.png";
+import home_copier from "../../assets/images/home/copier.png";
+import home_tech from "../../assets/images/home/technician.png";
 
 function HomePage() {
   return (
@@ -24,6 +26,47 @@ function HomePage() {
             provides the perfect office imaging solution for your organization.
             We prioritize quality services and exceeding customer expectations.
           </p>
+        </div>
+      </div>
+      <div className="information-section">
+        <h1>Services</h1>
+        <div className="information-section-grid">
+          <img
+            src={home_copier}
+            className="info-section-img"
+            alt="copy img"
+          ></img>
+          <div className="info-section-text-div">
+            <h2>Sales & Lease</h2>
+            <ul classname="info-section-list">
+              <li>New & refurbished multi-function printers (MFPs).</li>
+              <li>Color and Monochrome options</li>
+              <li>Delivery & installation within the Tri-state area</li>
+              <li>Flexible equipment rental agreements</li>
+              <li>Original & generic parts and toner cartridges</li>
+              <li>
+                Security features, Fax Machine, and additional add-on options
+              </li>
+              <li>
+                <a>Click here to view our product offerings!</a>
+              </li>
+            </ul>
+          </div>
+          <div className="info-section-text-div">
+            <h2>Repairs, Maintenance, & Supplies</h2>
+            <ul classname="info-section-list">
+              <li> On-site troubleshooting & repairs</li>
+              <li>Printer & Scanner set up for Windows & Mac</li>
+              <li>Networking troubleshooting</li>
+              <li>Remote troubleshooting </li>
+              <li>Service contracts for maintenance only</li>
+            </ul>
+          </div>
+          <img
+            src={home_tech}
+            className="info-section-img"
+            alt="copy img"
+          ></img>
         </div>
       </div>
       <div className="brands-section">
