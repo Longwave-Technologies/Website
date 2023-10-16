@@ -46,7 +46,7 @@ function HomePage() {
           <img src={toshiba} className="brand-imgs" alt="brand img"></img>
         </div>
       </div>
-      <div className="contact-page-button-section" id="fpc_effect-back">
+      <div id="fpc_effect-back">
         <div id="fpc_box">
           <div id="fpc_content">
             <a
