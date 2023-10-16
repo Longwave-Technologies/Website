@@ -15,14 +15,7 @@ function Header({ tabsData }) {
 
   return (
     <div className="header">
-      <img src={logo} 
-        alt="Home" 
-        className="logo" 
-        onClick={() => {
-          // alert('Logo clicked!'); 
-          navigate("/");
-        }} 
-      />
+      <img src={logo} alt="CompanyLogo" className="logo" />
       <ul className="tabs">
         {tabsData.map((tab, index) => (
           <li key={tab.label}>
