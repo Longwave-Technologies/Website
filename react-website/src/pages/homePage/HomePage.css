@@ -326,9 +326,21 @@ ul {
   #fpc_content h2 {
     font-size: 15px;
   }
+  #fpc_box:hover #fpc_corner-box {
+    /* edit corner size (First animation, when the whole page is rollovered) */
+    height: 30px;
+    width: 30px;
+  }
+  #fpc_box div#fpc_corner-box:hover {
+    /* edit corner size (Second animation, when the corner itself is rollovered) */
+    height: 60px;
+    width: 60px;
+  }
+
   .information-section-grid {
     display: grid;
     grid-template-columns: 400px;
+    padding: 0px;
   }
   .info-section-img {
     width: 300px;

@@ -61,3 +61,24 @@
     transform: scale(0.8);
   }
 }
+
+@media (max-width: 505px) {
+  .dot1 {
+    height: 1000px;
+    width: 1000px;
+    top: 1600px;
+    left: -700px;
+  }
+  .dot2 {
+    height: 1850px;
+    width: 1850px;
+    top: 1050px;
+    left: -1025px;
+  }
+  .dot3 {
+    height: 2775px;
+    width: 2775px;
+    top: 600px;
+    left: -1500px;
+  }
+}
