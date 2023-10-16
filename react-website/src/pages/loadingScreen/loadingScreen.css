@@ -14,16 +14,18 @@
   .loadingScreen.animationComplete {
     pointer-events: none;
     position: absolute;
-    animation: moveLogo 10s ;
-    -webkit-animation: moveLogo 10s ;
+    animation: moveLogo 15s ; 
+    -webkit-animation: moveLogo 15s ;
+    animation-duration: 15s;
 
   }
 
   .introSVG{
     pointer-events: none;
     position: absolute;
-    animation: moveLogo 30s ;
-    -webkit-animation: moveLogo 30s ;
+    animation: moveLogo 15s ;
+    -webkit-animation: moveLogo 15s ;
+    animation-duration: 15s;
 
   }
   
@@ -40,15 +42,15 @@
         -webkit-transform: translate(0, 0) scale(1) rotate(0deg);        
  
     }
-    70% { 
+    25% { 
         opacity: 0;
-        transform:  translate(-110%, -120%) scale(-0.9) rotate(0deg);
-        -webkit-transform:  translate(-110%, -120%) scale(-0.9) rotate(0deg);
+        transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
+        -webkit-transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
     }
     100% { 
         opacity: 0;
-        transform:  translate(-110%, -120%) scale(-0.9) rotate(0deg);
-        -webkit-transform:  translate(-110%, -120%) scale(-0.9) rotate(0deg);
+        transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
+        -webkit-transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
     }
   
 }

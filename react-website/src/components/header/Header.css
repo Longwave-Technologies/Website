@@ -11,7 +11,7 @@
   background-color: #fff;
   display: flex;
   align-items: center; /* Vertically center content */
-  justify-content: space-between; /* Space between tabs and logo */
+  justify-content: flex-start; /* Space between tabs and logo */
   text-align: center;
   width: 100%;
   height: 100px;
@@ -21,21 +21,23 @@
 
 /* Style for the logo */
 .logo {
+  cursor: pointer;
   display: flex;
   align-items: left;
   list-style: none;
   width: 180px; /* Set your desired width */
   height: auto; /* Let the height adjust proportionally */
-  margin: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .tabs {
-  align-items: right;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 30px;
+  margin: 50px;
 }
 
 .tabs li {
@@ -71,7 +73,7 @@
     margin: auto auto auto 10px;
   }
   .tabs li {
-    align-items: right;
+    align-items: left;
     text-decoration: none;
     font-size: 15px;
   }
