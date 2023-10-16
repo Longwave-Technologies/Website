@@ -47,9 +47,6 @@ function App() {
 
   return (
     <div className="App">
-      <div class="dot3"></div>
-      <div class="dot2"></div>
-      <div class="dot1"></div>
       {isLoading ? (
         <LoadingScreen />
       ) : (
