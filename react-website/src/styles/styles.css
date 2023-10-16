@@ -19,6 +19,7 @@ p {
 
 a:hover {
   cursor: pointer;
+  color: #0c84f4;
 }
 
 @media (max-width: 505px) {

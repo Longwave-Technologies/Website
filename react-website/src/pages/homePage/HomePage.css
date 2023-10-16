@@ -82,14 +82,10 @@ ul {
   color: #000;
 }
 
-.button:hover {
-  color: #0c84f4;
-}
-
 /*Contact Page Link corner page curl*/
 #fpc_effect-back {
   height: 200px;
-  background-color: #020101; /* some background color to match corner inside's */
+  background-color: #ffff; /* some background color to match corner inside's */
   justify-content: center;
   margin: 0 auto;
 }
