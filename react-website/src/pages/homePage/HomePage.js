@@ -92,6 +92,46 @@ function HomePage() {
           <img src={toshiba} className="brand-imgs" alt="brand img"></img>
         </div>
       </div>
+      <div className="information-section" id="About">
+        <h1>Our Story</h1>
+        <div className="information-section-grid">
+          <img
+            src={home_copier}
+            className="info-section-img"
+            alt="copy img"
+          ></img>
+          <div className="info-section-text-div">
+            <h2>It all started in 1991...</h2>
+            <ul classname="info-section-list">
+              <p>
+                A Taiwanese immigrant looking to better his family’s livelihood
+                took the risk of starting his own business providing copier
+                repairs to local businesses. Clients started coming from all
+                over the Tri-State area and provided services expanded. Today we
+                focus on quality and customer satisfaction, ready to serve our
+                customers any time.
+              </p>
+            </ul>
+          </div>
+          <div className="info-section-text-div">
+            <h2>Our valued clients</h2>
+            <ul classname="info-section-list">
+              <p>
+                We have provided quality service to satisfied customers that
+                have been with us for over 20 years. Our clients are in
+                industries such as banking, architecture, construction,
+                manufacturing, logistics, medical, law, accounting, insurance,
+                education, nonprofits, travel, realty , and more.
+              </p>
+            </ul>
+          </div>
+          <img
+            src={home_tech}
+            className="info-section-img"
+            alt="copy img"
+          ></img>
+        </div>
+      </div>
       <div id="fpc_effect-back">
         <Link className="button" to="/Contact"></Link>
         <div id="fpc_box">
@@ -114,9 +154,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-
-      <div className="brands"></div>
-      <div className="boost"></div>
     </div>
   );
 }
