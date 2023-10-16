@@ -41,7 +41,7 @@
 .tabs li {
   align-items: right;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 .tab {
@@ -52,6 +52,8 @@
 
 .tab:hover {
   color: #0c84f4; /* Change the color on hover */
+  transform: scale(1.1);
+  font-weight: 500;
 }
 
 .tab.active {
