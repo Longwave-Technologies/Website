@@ -16,6 +16,7 @@ import toshiba from "../../assets/images/brands/toshiba.png";
 import xerox from "../../assets/images/brands/xerox.png";
 import home_copier from "../../assets/images/home/copier.png";
 import home_tech from "../../assets/images/home/technician.png";
+import about_customer from "../../assets/images/home/customer.png";
 
 function HomePage() {
   return (
@@ -130,7 +131,7 @@ function HomePage() {
             </ul>
           </div>
           <img
-            src={home_tech}
+            src={about_customer}
             className="info-section-img"
             alt="copy img"
           ></img>
