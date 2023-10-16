@@ -338,18 +338,18 @@ ul {
   }
 
   .information-section-grid {
-    display: grid;
     grid-template-columns: 400px;
-    padding: 0px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    margin: auto;
   }
   .info-section-img {
     width: 300px;
   }
   .info-section-text-div {
-    width: 320px;
+    width: 300px;
     font-size: 14px;
-  }
-  ul {
-    text-align: left;
   }
 }
