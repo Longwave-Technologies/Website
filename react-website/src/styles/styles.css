@@ -35,7 +35,7 @@ a:hover {
   color: #0c84f4;
 }
 
-@media (max-width: 505px) {
+@media (max-width: 800px) {
   h1 {
     font-size: 20px;
     font-weight: normal;

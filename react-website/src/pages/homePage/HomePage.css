@@ -282,7 +282,7 @@ ul {
 }
 /*Contact Page Link ^^^^ */
 
-@media (max-width: 505px) {
+@media (max-width: 800px) {
   .content {
     margin-top: 70px;
   }
