@@ -28,11 +28,12 @@
 
 .tabs {
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 50px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .tabs li {
