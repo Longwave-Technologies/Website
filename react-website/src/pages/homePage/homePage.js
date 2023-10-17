@@ -17,6 +17,8 @@ import xerox from "../../assets/images/brands/xerox.png";
 import home_copier from "../../assets/images/home/copier.png";
 import home_tech from "../../assets/images/home/technician.png";
 import about_customer from "../../assets/images/home/customer.png";
+import Services from '../../pages/servicePage/ServicePage';
+import ServicePage from "../../pages/servicePage/ServicePage";
 
 function HomePage() {
   return (
@@ -31,7 +33,8 @@ function HomePage() {
         </div>
       </div>
       <div className="information-section" id="services-section">
-        <h1>Services</h1>
+        {<ServicePage />}
+        {/* <h1>Services</h1>
         <div className="information-section-grid">
           <img
             src={home_copier}
@@ -71,7 +74,7 @@ function HomePage() {
             className="info-section-img"
             alt="copy img"
           ></img>
-        </div>
+        </div> */}
       </div>
       <div className="brands-section">
         <h1>Brands We Support</h1>

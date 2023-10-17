@@ -27,7 +27,7 @@ function App() {
 
         localStorage.setItem("isWebsiteLoading", "false");
         setIsLoading(false);
-      }, 4030); // Simulate a 4-second loading time
+      }, 3300); // Simulate a 4-second loading time
       // Remove the event listener
     };
 
@@ -50,7 +50,7 @@ function App() {
       {isLoading ? (
         <LoadingScreen />
       ) : (
-        (console.log("AppRouter displayed"), (<AppRouter />))
+        ((<AppRouter />))
       )}
     </div>
   );

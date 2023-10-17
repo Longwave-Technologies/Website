@@ -44,13 +44,11 @@
     }
     25% { 
         opacity: 0;
-        transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
-        -webkit-transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
+
     }
     100% { 
         opacity: 0;
-        transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
-        -webkit-transform:  translate(-80%, -120%) scale(-0.7) rotate(0deg);
+
     }
   
 }

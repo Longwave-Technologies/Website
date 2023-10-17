@@ -17,7 +17,7 @@ const LoadingScreen = () => {
 
     const animationTimeout = setTimeout(() => {
       setAnimationComplete(true);
-    }, 700); // Change the time as needed
+    }, 800); // Change the time as needed
     
     console.log('animationComplete:', animationComplete);
 

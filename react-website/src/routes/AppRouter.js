@@ -29,11 +29,13 @@ function AppRouter() {
         <div class="dot2"></div>
         <div class="dot1"></div>
       </div>
+    
       <Router>
         <Header tabsData={tabsData} />
+
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services"  element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
