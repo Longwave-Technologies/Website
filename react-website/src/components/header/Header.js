@@ -17,16 +17,16 @@ function Header({ tabsData }) {
 
   return (
     <div className="header">
-      <img
-        src={logo}
-        alt="Home"
-        className="logo"
-        onClick={() => {
-          // alert('Logo clicked!');
-          navigate("/");
-        }}
-      />
       <ul className="tabs">
+        <img
+          src={logo}
+          alt="Home"
+          className="logo"
+          onClick={() => {
+            // alert('Logo clicked!');
+            navigate("/");
+          }}
+        />
         {tabsData.map((tab, index) => (
           <li key={tab.label}>
             <div

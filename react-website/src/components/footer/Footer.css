@@ -31,7 +31,7 @@
   color: #00aaff;
 }
 
-@media (max-width: 505px) {
+@media (max-width: 600px) {
   .footer {
     width: 400px;
   }

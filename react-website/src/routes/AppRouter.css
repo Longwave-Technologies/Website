@@ -66,7 +66,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .dot1 {
     height: 1000px;
     width: 1000px;
