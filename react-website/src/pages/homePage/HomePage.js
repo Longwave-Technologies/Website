@@ -14,8 +14,11 @@ import xerox from "../../assets/images/brands/xerox.png";
 import home_copier from "../../assets/images/home/copier.png";
 import home_tech from "../../assets/images/home/technician.png";
 import about_customer from "../../assets/images/home/customer.png";
+import * as Scroll from "react-scroll";
 
 function HomePage() {
+  const Element = Scroll.Element;
+
   return (
     <div className="content">
       <div className="parallax-container">
@@ -27,50 +30,52 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div className="information-section" id="services-section">
-        <h1>Services</h1>
-        <div className="information-section-grid">
-          <img
-            src={home_copier}
-            className="info-section-img"
-            alt="copy img"
-          ></img>
-          <div className="info-section-text-div">
-            <h2>Sales & Lease</h2>
-            <ul classname="info-section-list">
-              <li>New & refurbished multi-function printers (MFPs).</li>
-              <li>Color or Monochrome options</li>
-              <li>Delivery & installation within the Tri-state area</li>
-              <li>Flexible equipment rental agreements</li>
-              <li>Original & generic parts and toner cartridges</li>
-              <li>
-                Security features, Fax Machine, and additional add-on options
-              </li>
-              <li>
-                <Link className="button" to="/Product">
-                  {" "}
-                  <strong>Click here to view our product offerings!</strong>
-                </Link>
-              </li>
-            </ul>
+      <Element name="services-anchor">
+        <div className="information-section" id="services-section">
+          <h1>Services</h1>
+          <div className="information-section-grid">
+            <img
+              src={home_copier}
+              className="info-section-img"
+              alt="copy img"
+            ></img>
+            <div className="info-section-text-div">
+              <h2>Sales & Lease</h2>
+              <ul classname="info-section-list">
+                <li>New & refurbished multi-function printers (MFPs).</li>
+                <li>Color or Monochrome options</li>
+                <li>Delivery & installation within the Tri-state area</li>
+                <li>Flexible equipment rental agreements</li>
+                <li>Original & generic parts and toner cartridges</li>
+                <li>
+                  Security features, Fax Machine, and additional add-on options
+                </li>
+                <li>
+                  <Link className="button" to="/Product">
+                    {" "}
+                    <strong>Click here to view our product offerings!</strong>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="info-section-text-div">
+              <h2>Repairs, Maintenance, & Supplies</h2>
+              <ul classname="info-section-list">
+                <li>On-site troubleshooting & repairs</li>
+                <li>Printer & Scanner set up for Windows & Mac</li>
+                <li>Networking troubleshooting</li>
+                <li>Remote troubleshooting </li>
+                <li>Service contracts for maintenance only</li>
+              </ul>
+            </div>
+            <img
+              src={home_tech}
+              className="info-section-img"
+              alt="copy img"
+            ></img>
           </div>
-          <div className="info-section-text-div">
-            <h2>Repairs, Maintenance, & Supplies</h2>
-            <ul classname="info-section-list">
-              <li>On-site troubleshooting & repairs</li>
-              <li>Printer & Scanner set up for Windows & Mac</li>
-              <li>Networking troubleshooting</li>
-              <li>Remote troubleshooting </li>
-              <li>Service contracts for maintenance only</li>
-            </ul>
-          </div>
-          <img
-            src={home_tech}
-            className="info-section-img"
-            alt="copy img"
-          ></img>
         </div>
-      </div>
+      </Element>
       <div className="brands-section">
         <h1>Brands We Support</h1>
         <div className="brand-imgs-section">

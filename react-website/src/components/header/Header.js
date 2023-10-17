@@ -1,20 +1,40 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logoFinal.png";
 import "./Header.css";
-import { Link, useNavigate } from "react-router-dom";
-import Home from "../../pages/homePage/HomePage";
+import { useNavigate, useLocation } from "react-router-dom";
 // import { Link } from 'react-scroll';
 import "../../styles/styles.css";
+import * as Scroll from "react-scroll";
 
 function Header({ tabsData }) {
   const [activeTab, setActiveTab] = useState("home"); // Initially set to 'home', change as needed
   const navigate = useNavigate();
+
+  const path = useLocation().pathname;
+  const location = path.split("/")[1];
+  const scroller = Scroll.scroller;
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     navigate(tab);
   };
 
+  const scrollToServicesAnchor = () => {
+    scroller.scrollTo("services-anchor", {
+      duration: 0,
+      smooth: true,
+      offset: -150,
+    });
+  };
+
+  const goToHomeAndScrollServices = async () => {
+    await navigate("/");
+    await scroller.scrollTo("services-anchor", {
+      duration: 0,
+      smooth: true,
+      offset: -150,
+    });
+  };
   return (
     <div className="header">
       <ul className="tabs">
@@ -27,6 +47,17 @@ function Header({ tabsData }) {
             navigate("/");
           }}
         />
+        <li>
+          {location === "home" ? (
+            <div className="tab" onClick={scrollToServicesAnchor}>
+              Services
+            </div>
+          ) : (
+            <div className="tab" onClick={goToHomeAndScrollServices}>
+              Services
+            </div>
+          )}
+        </li>
         {tabsData.map((tab, index) => (
           <li key={tab.label}>
             <div
