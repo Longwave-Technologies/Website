@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./LoadingScreen.css"; // Create this CSS file for styling
 import { default as introSVG } from "../../assets/images/logoFinalAnimation.svg";
-import { gsap } from "gsap";
 import "../../styles/styles.css";
 
 const LoadingScreen = () => {
@@ -17,7 +16,7 @@ const LoadingScreen = () => {
 
     const animationTimeout = setTimeout(() => {
       setAnimationComplete(true);
-    }, 800); // Change the time as needed
+    }, 1000); // Change the time as needed
 
     console.log("animationComplete:", animationComplete);
 

@@ -1,56 +1,39 @@
 .loadingScreen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .loadingScreen.animationComplete {
-    pointer-events: none;
-    position: absolute;
-    animation: moveLogo 15s ; 
-    -webkit-animation: moveLogo 15s ;
-    animation-duration: 15s;
-
-  }
-
-  .introSVG{
-    pointer-events: none;
-    position: absolute;
-    animation: moveLogo 15s ;
-    -webkit-animation: moveLogo 15s ;
-    animation-duration: 15s;
-
-  }
-  
-@keyframes moveLogo {
-    0% { 
-        opacity: 1; 
-        transform:  translate(0, 0) scale(1)  rotate(0deg); 
-        -webkit-transform:  translate(0, 0) scale(1)  rotate(0deg); 
-        -moz-transform:  translate(0, 0) scale(1)  rotate(0deg); 
-    }
-    20% { 
-        opacity: 1;
-        transform: translate(0, 0) scale(1) rotate(0deg);   
-        -webkit-transform: translate(0, 0) scale(1) rotate(0deg);        
- 
-    }
-    25% { 
-        opacity: 0;
-
-    }
-    100% { 
-        opacity: 0;
-
-    }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
-  
-  
+
+.introSVG {
+  pointer-events: none;
+  position: absolute;
+  animation: moveLogo 15s;
+  -webkit-animation: moveLogo 15s;
+}
+
+@keyframes moveLogo {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    -webkit-transform: translate(0, 0) scale(1) rotate(0deg);
+    -moz-transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    -webkit-transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,9 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import parallaxImg from "../../assets/images/home/parallax-background.png";
 import "./HomePage.css";
 import "../../styles/styles.css";
 import { Link } from "react-router-dom";
-import ServicesInfo from "../../components/textAndImageList/TextAndImageList";
 import canon from "../../assets/images/brands/canon.png";
 import brother from "../../assets/images/brands/brother.png";
 import hp from "../../assets/images/brands/hp.png";
@@ -17,8 +14,6 @@ import xerox from "../../assets/images/brands/xerox.png";
 import home_copier from "../../assets/images/home/copier.png";
 import home_tech from "../../assets/images/home/technician.png";
 import about_customer from "../../assets/images/home/customer.png";
-import Services from "../../pages/servicePage/ServicePage";
-import ServicePage from "../../pages/servicePage/ServicePage";
 
 
 function HomePage() {
@@ -57,9 +52,10 @@ function HomePage() {
                 Security features, Fax Machine, and additional add-on options
               </li>
               <li>
-                <a className="button">
+                <Link className="button" to="/Product">
+                  {" "}
                   <strong>Click here to view our product offerings!</strong>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
