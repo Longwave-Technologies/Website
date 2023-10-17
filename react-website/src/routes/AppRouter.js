@@ -1,7 +1,7 @@
 import React from "react";
 import "./AppRouter.css";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../pages/homePage/HomePage";
 import Header from "../components/header/Header";
 import Products from "../pages/productPage/ProductPage";

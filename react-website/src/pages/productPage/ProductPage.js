@@ -3,10 +3,11 @@ import "../../styles/styles.css";
 
 function ProductPage() {
   return (
-    // <div>
-    <h2>ProductPage</h2>
-    // <p>Welcome to the Home page.</p>
-    // </div>
+    <div className="content">
+      <div>
+        <h2>ProductPage</h2>
+      </div>
+    </div>
   );
 }
 
