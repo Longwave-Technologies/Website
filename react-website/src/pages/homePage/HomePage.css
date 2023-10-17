@@ -68,7 +68,8 @@ ul {
   text-align: left;
   margin-left: 20px;
   margin-right: 20px;
-  width: 470px;
+  width: 100%;
+  max-width: 480px;
 }
 /*Brands we support section*/
 .brand-imgs-section {
