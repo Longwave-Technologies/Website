@@ -30,7 +30,7 @@ function AppRouter() {
         <div class="dot1"></div>
       </div>
     
-      <Router>
+      <Router basename="/">
         <Header tabsData={tabsData} />
 
         <Routes>
