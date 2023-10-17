@@ -19,6 +19,12 @@ function Header({ tabsData }) {
     navigate(tab);
   };
 
+  const scroll = () => {
+    const section = document.querySelector( '#services-section' );
+    console.log('scroll');
+    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  };
+
   const scrollToServicesAnchor = () => {
     scroller.scrollTo("services-anchor", {
       duration: 0,
