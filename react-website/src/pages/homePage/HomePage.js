@@ -17,8 +17,7 @@ import about_customer from "../../assets/images/home/customer.png";
 
 
 function HomePage() {
-  const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView()    
+
 
 
   return (
@@ -32,7 +31,7 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div className="information-section" id="services-section" ref={myRef}>
+      <div className="information-section" id="services-section" >
         <h1>Services</h1>
         <div className="information-section-grid">
           <img
