@@ -35,7 +35,7 @@ function AppRouter() {
 
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/services"  element={<Services />} />
+          <Route path="/services" />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

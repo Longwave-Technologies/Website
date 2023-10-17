@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import parallaxImg from "../../assets/images/home/parallax-background.png";
 import "./HomePage.css";
 import "../../styles/styles.css";
@@ -20,7 +20,12 @@ import about_customer from "../../assets/images/home/customer.png";
 import Services from "../../pages/servicePage/ServicePage";
 import ServicePage from "../../pages/servicePage/ServicePage";
 
+
 function HomePage() {
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView()    
+
+
   return (
     <div className="content">
       <div className="parallax-container">
@@ -32,7 +37,7 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div className="information-section" id="services-section">
+      <div className="information-section" id="services-section" ref={myRef}>
         <h1>Services</h1>
         <div className="information-section-grid">
           <img
