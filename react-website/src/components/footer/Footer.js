@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
 import logoFooter from "../../assets/images/logoFinal.png";
+import "../../styles/styles.css";
 
 function Footer() {
   const scrollToTop = () => {
@@ -20,9 +21,9 @@ function Footer() {
             size={10}
           ></img>
         </div>
-        <p>
+        <h4>
           &copy; {year} Longwave Technologies L.I. Inc. All Rights Reserved.
-        </p>
+        </h4>
       </div>
     </footer>
   );

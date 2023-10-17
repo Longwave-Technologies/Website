@@ -22,7 +22,7 @@ import ServicePage from "../../pages/servicePage/ServicePage";
 
 function HomePage() {
   return (
-    <div className="content" id="content">
+    <div className="content">
       <div className="parallax-container">
         <div className="text-overlay">
           <p>
@@ -97,7 +97,7 @@ function HomePage() {
       </div>
       <div className="information-section" id="About">
         <h1>Our Story</h1>
-        <h3>
+        <h3 className="sub-title-text">
           We are passionate about partnering with good people and making their
           life easier
         </h3>
@@ -109,20 +109,18 @@ function HomePage() {
           ></img>
           <div className="info-section-text-div">
             <h2>It all started in 1991...</h2>
-            <ul classname="info-section-list">
-              <p>
-                A Taiwanese immigrant looking to better his family’s livelihood
-                took the risk of starting his own business providing copier
-                repairs to local businesses. Clients started coming from all
-                over the Tri-State area and provided services expanded. Today we
-                focus on quality and customer satisfaction, ready to serve our
-                customers any time.
-              </p>
-            </ul>
+            <p className="info-section-para">
+              A Taiwanese immigrant looking to better his family’s livelihood
+              took the risk of starting his own business providing copier
+              repairs to local businesses. Clients started coming from all over
+              the Tri-State area and provided services expanded. Today we focus
+              on quality and customer satisfaction, ready to serve our customers
+              any time.
+            </p>
           </div>
           <div className="info-section-text-div">
             <h2>Our valued clients</h2>
-            <ul classname="info-section-list">
+            <p className="info-section-para">
               <p>
                 We have provided quality service to satisfied customers that
                 have been with us for over 20 years. Our clients are in
@@ -130,7 +128,7 @@ function HomePage() {
                 manufacturing, logistics, medical, law, accounting, insurance,
                 education, nonprofits, travel, realty , and more.
               </p>
-            </ul>
+            </p>
           </div>
           <img
             src={about_customer}

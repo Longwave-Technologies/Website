@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logoFinal.png";
 import "./Header.css";
-import {  Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Home from "../../pages/homePage/HomePage";
 // import { Link } from 'react-scroll';
-
+import "../../styles/styles.css";
 
 function Header({ tabsData }) {
   const [activeTab, setActiveTab] = useState("home"); // Initially set to 'home', change as needed
@@ -12,27 +12,26 @@ function Header({ tabsData }) {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-      navigate(tab);
-    
+    navigate(tab);
   };
 
   return (
     <div className="header">
-     <img src={logo} 
-        alt="Home" 
-        className="logo" 
+      <img
+        src={logo}
+        alt="Home"
+        className="logo"
         onClick={() => {
-          // alert('Logo clicked!'); 
+          // alert('Logo clicked!');
           navigate("/");
-        }} 
-      />     
-       <ul className="tabs">
+        }}
+      />
+      <ul className="tabs">
         {tabsData.map((tab, index) => (
           <li key={tab.label}>
             <div
               className="tab"
               onClick={() => {
-
                 handleTabClick(tab.path);
               }}
               style={activeTab === tab.path ? { color: "#159cf6" } : {}}

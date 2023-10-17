@@ -31,18 +31,11 @@
   color: #00aaff;
 }
 
-p {
-  font-size: 15px;
-}
-
 @media (max-width: 505px) {
   .footer {
     width: 400px;
   }
   .logoFooter {
     width: 100px;
-  }
-  p {
-    font-size: 11px;
   }
 }
