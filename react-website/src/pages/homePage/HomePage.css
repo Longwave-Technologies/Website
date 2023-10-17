@@ -11,7 +11,7 @@
   background-position: 25% 75%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .background-image {
@@ -37,24 +37,25 @@
 
 /*information section*/
 .information-section {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .information-section-grid {
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: minmax(450px, 600px) minmax(450px, 600px);
   height: 100%;
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
   align-items: center;
-  margin: 0px 220px 0px 220px;
+  margin: 0px 200px 0px 200px;
 }
 .info-section-img {
-  width: 400px;
   filter: drop-shadow(6px 0px 6px rgba(47, 47, 47, 0.5));
+  width: 350px;
 }
+
 .info-section-text-div {
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 ul {
   text-align: left;
@@ -76,7 +77,7 @@ ul {
   justify-content: center;
 }
 .brands-section {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .brand-imgs {
   height: 30px;
