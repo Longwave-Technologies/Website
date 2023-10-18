@@ -23,7 +23,7 @@ function HomePage() {
   const navigate = useNavigate();
   function delayAndGo(e, path) {
     e.preventDefault();
-    setTimeout(() => navigate(path), 300);
+    setTimeout(() => navigate(path), 100);
   }
   return (
     <div className="content">
