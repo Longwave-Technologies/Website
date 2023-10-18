@@ -75,7 +75,7 @@ function ContactPage() {
                 name="state"
                 required=""
               >
-                <option value="" selected="" disabled="">
+                <option value="" selected="" disabled="" id="state-option">
                   State
                 </option>
                 <option value="AL">Alabama</option>

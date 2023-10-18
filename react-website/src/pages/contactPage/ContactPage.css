@@ -65,8 +65,8 @@ h3 {
   color: rgba(57, 57, 57, 0.5);
 }
 .input-data label:after {
-  content: "*";
-  color: red;
+  content: " *";
+  color: rgb(203, 0, 0);
 }
 
 .input-data .underline {
@@ -159,14 +159,12 @@ h3 {
   font-size: 17px;
   margin-bottom: 3rem;
 }
+#state-selection option {
+  background-color: rgba(0, 0, 0, 0%);
+  text-decoration: none;
+}
 #state-selection:hover {
   cursor: pointer;
-}
-#state-select-div select:after {
-  font-size: 1.3rem;
-}
-#state-select-div select.selector {
-  color: red;
 }
 
 /*styling for button*/
@@ -179,7 +177,7 @@ h3 {
   padding: 0.8rem;
   border: none;
   color: antiquewhite;
-  background-color: rgb(130, 130, 130);
+  background-color: rgb(165, 165, 165);
 }
 .submitbtn:hover {
   background-color: #0c84f4;
@@ -202,6 +200,9 @@ h3 {
   }
   .contact-description {
     margin-bottom: 30px;
+  }
+  .input-data .underline:before {
+    transition: transform 0.5s ease;
   }
   #state-select-div select {
     font-size: 17px;
