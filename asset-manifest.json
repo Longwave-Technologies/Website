@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c5494e1.css",
-    "main.js": "/static/js/main.db94778d.js",
+    "main.css": "/static/css/main.3a64b646.css",
+    "main.js": "/static/js/main.89278a05.js",
     "static/js/787.3a362fa7.chunk.js": "/static/js/787.3a362fa7.chunk.js",
     "static/media/technician.png": "/static/media/technician.966f1e2352f529c757ac.png",
     "static/media/customer.png": "/static/media/customer.2f2fa56ea3446a8347cc.png",
@@ -19,12 +19,12 @@
     "static/media/kyocera.png": "/static/media/kyocera.5e2c2741fa8199d172ff.png",
     "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
-    "main.2c5494e1.css.map": "/static/css/main.2c5494e1.css.map",
-    "main.db94778d.js.map": "/static/js/main.db94778d.js.map",
+    "main.3a64b646.css.map": "/static/css/main.3a64b646.css.map",
+    "main.89278a05.js.map": "/static/js/main.89278a05.js.map",
     "787.3a362fa7.chunk.js.map": "/static/js/787.3a362fa7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c5494e1.css",
-    "static/js/main.db94778d.js"
+    "static/css/main.3a64b646.css",
+    "static/js/main.89278a05.js"
   ]
 }
