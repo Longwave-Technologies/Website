@@ -14,6 +14,7 @@ import xerox from "../../assets/images/brands/xerox.png";
 import home_copier from "../../assets/images/home/copier.png";
 import home_tech from "../../assets/images/home/technician.png";
 import about_customer from "../../assets/images/home/customer.png";
+import oldpic from "../../assets/images/home/oldpic.png";
 import * as Scroll from "react-scroll";
 
 function HomePage() {
@@ -103,11 +104,7 @@ function HomePage() {
           life easier
         </h3>
         <div className="information-section-grid">
-          <img
-            src={home_copier}
-            className="info-section-img"
-            alt="copy img"
-          ></img>
+          <img src={oldpic} className="info-section-img" alt="copy img"></img>
           <div className="info-section-text-div">
             <h2>It all started in 1991...</h2>
             <p className="info-section-para">
