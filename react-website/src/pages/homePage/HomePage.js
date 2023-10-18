@@ -135,28 +135,27 @@ function HomePage() {
           ></img>
         </div>
       </div>
-      <div id="fpc_effect-back">
-        <Link className="button" to="/Contact"></Link>
-        <div id="fpc_box">
-          <div id="fpc_content">
-            <Link className="button" to="/Contact">
+      <Link className="button" to="/Contact">
+        <div id="fpc_effect-back">
+          <div id="fpc_box">
+            <div id="fpc_content">
               <h1> Ready to boost your productivity?</h1>
               <h3> Click here</h3>
-            </Link>
-          </div>
-          <div id="fpc_corner-box">
-            <div id="fpc_page-tip">
-              <div id="fpc_corner-contents">
-                {/* If you want to add text behind the paper curl
+            </div>
+            <div id="fpc_corner-box">
+              <div id="fpc_page-tip">
+                <div id="fpc_corner-contents">
+                  {/* If you want to add text behind the paper curl
                 <div id="fpc_corner-button">
                   <strong>Click here </strong> to contact us
                 </div> 
                 */}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>{" "}
+      </Link>
     </div>
   );
 }

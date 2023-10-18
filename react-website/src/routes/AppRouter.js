@@ -24,7 +24,6 @@ function AppRouter() {
 
       <Router basename="/">
         <Header tabsData={tabsData} />
-
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/products" element={<Products />} />
