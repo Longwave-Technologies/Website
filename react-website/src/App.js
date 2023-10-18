@@ -46,13 +46,7 @@ function App() {
   }, [isLoading, isWebsiteLoading]);
 
   return (
-    <div className="App">
-      {isLoading ? (
-        <LoadingScreen />
-      ) : (
-        ((<AppRouter />))
-      )}
-    </div>
+    <div className="App">{isLoading ? <LoadingScreen /> : <AppRouter />}</div>
   );
 }
 export default App;
