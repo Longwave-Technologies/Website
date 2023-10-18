@@ -29,7 +29,7 @@ h3 {
   width: 100%;
   height: 1rem;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
   padding: 1rem;
   margin-bottom: 3rem;
@@ -46,7 +46,7 @@ h3 {
 .input-data input:valid ~ label,
 .textarea textarea:valid ~ label {
   transform: translateY(-2.5rem);
-  font-size: 14px;
+  font-size: 15px;
   color: #3498db;
   left: 0.2rem;
 }
@@ -58,7 +58,7 @@ h3 {
 .input-data label {
   position: absolute;
   pointer-events: none;
-  font-size: 16px;
+  font-size: 15px;
   transition: all 0.3s ease;
   left: 0.2rem;
   bottom: 10px;
@@ -151,12 +151,12 @@ h3 {
   width: 100%;
   height: 3rem;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
   background-color: rgba(0, 0, 0, 0);
 }
 #state-select-div select {
-  font-size: 17px;
+  font-size: 1.4rem;
   margin-bottom: 3rem;
 }
 #state-selection option {
@@ -205,7 +205,7 @@ h3 {
     transition: transform 0.5s ease;
   }
   #state-select-div select {
-    font-size: 17px;
+    font-size: 1.4rem;
     margin-bottom: 3rem;
   }
   .input-data .underline {
