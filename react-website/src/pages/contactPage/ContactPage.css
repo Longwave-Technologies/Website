@@ -1,6 +1,6 @@
 .contactForm {
   width: 50rem;
-  height: 53rem;
+  height: 55rem;
   background-color: rgba(255, 255, 255, 0.5);
   margin: auto;
   margin-top: 100px;
@@ -26,7 +26,7 @@ h3 {
 .textarea textarea {
   position: relative;
   display: block;
-  width: 90%;
+  width: 100%;
   height: 1rem;
   border: none;
   font-size: 1.5rem;
@@ -34,6 +34,11 @@ h3 {
   padding: 1rem;
   margin-bottom: 3rem;
   background-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 600px) {
+  .input-data input {
+    width: 90%;
+  }
 }
 
 .input-data input:focus ~ label,
@@ -45,6 +50,7 @@ h3 {
   color: #3498db;
   left: 0.2rem;
 }
+
 .textarea textarea {
   resize: none;
   padding-top: 10px;
@@ -96,6 +102,7 @@ h3 {
     height: 4rem;
     margin-bottom: 2rem;
   }
+
   #firstname-input,
   #lastname-input,
   #address-input,
@@ -120,7 +127,7 @@ h3 {
     position: absolute;
     bottom: 3rem;
     height: 2px;
-    width: 90%;
+    width: 112%;
   }
 
   #firstname-underline:before,
@@ -128,7 +135,7 @@ h3 {
   #address-underline:before,
   #city-underline:before,
   #zipcode-underline:before {
-    width: 90%;
+    width: 100%;
   }
 
   #firstname-label,
@@ -136,7 +143,7 @@ h3 {
   #address-label,
   #city-label,
   #zipcode-label {
-    bottom: 3rem;
+    bottom: 3.3rem;
   }
 }
 #state-selection {
