@@ -67,7 +67,7 @@ function Header({ tabsData }) {
                 onClick={() => {
                   handleTabClick(tab.path);
                 }}
-                style={activeTab === tab.path ? { color: "#159cf6" } : {}}
+                /* style={activeTab === tab.path ? { color: "#0c84f4" } : {}}*/
               >
                 {tab.label}
               </div>

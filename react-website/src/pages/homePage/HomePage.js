@@ -70,7 +70,7 @@ function HomePage() {
                     options
                   </li>
                   <li>
-                    <Link className="button" to="/product">
+                    <Link className="button" to="/products">
                       <strong>Click here to view our product offerings!</strong>
                     </Link>
                   </li>
@@ -187,7 +187,7 @@ function HomePage() {
         <Link
           className="button"
           to="/Contact"
-          onClick={(e) => delayAndGo(e, "/Contact")}
+          onClick={(e) => delayAndGo(e, "/contact")}
         >
           <div id="fpc_effect-back">
             <div id="fpc_box">
