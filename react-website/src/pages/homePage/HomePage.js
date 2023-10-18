@@ -1,6 +1,6 @@
 import "./HomePage.css";
 import "../../styles/styles.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import canon from "../../assets/images/brands/canon.png";
 import brother from "../../assets/images/brands/brother.png";
 import hp from "../../assets/images/brands/hp.png";
@@ -19,7 +19,11 @@ import * as Scroll from "react-scroll";
 
 function HomePage() {
   const Element = Scroll.Element;
-
+  const navigate = useNavigate();
+  function delayAndGo(e, path) {
+    e.preventDefault();
+    setTimeout(() => navigate(path), 300);
+  }
   return (
     <div className="content">
       <div className="parallax-container">
@@ -134,7 +138,11 @@ function HomePage() {
           ></img>
         </div>
       </div>
-      <Link className="button" to="/Contact">
+      <Link
+        className="button"
+        to="/Contact"
+        onClick={(e) => delayAndGo(e, "/Contact")}
+      >
         <div id="fpc_effect-back">
           <div id="fpc_box">
             <div id="fpc_content">
