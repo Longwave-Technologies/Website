@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 // import { Link } from 'react-scroll';
 import "../../styles/styles.css";
 import * as Scroll from "react-scroll";
+import Fade from "react-reveal/Fade";
 
 function Header({ tabsData }) {
   const [activeTab, setActiveTab] = useState("home"); // Initially set to 'home', change as needed
@@ -36,43 +37,45 @@ function Header({ tabsData }) {
     });
   };
   return (
-    <div className="header">
-      <ul className="tabs">
-        <img
-          src={logo}
-          alt="Home"
-          className="logo"
-          onClick={() => {
-            // alert('Logo clicked!');
-            navigate("/");
-          }}
-        />
-        <li>
-          {location === "home" ? (
-            <div className="tab" onClick={scrollToServicesAnchor}>
-              Services
-            </div>
-          ) : (
-            <div className="tab" onClick={goToHomeAndScrollServices}>
-              Services
-            </div>
-          )}
-        </li>
-        {tabsData.map((tab, index) => (
-          <li key={tab.label}>
-            <div
-              className="tab"
-              onClick={() => {
-                handleTabClick(tab.path);
-              }}
-              style={activeTab === tab.path ? { color: "#159cf6" } : {}}
-            >
-              {tab.label}
-            </div>
+    <Fade top>
+      <div className="header">
+        <ul className="tabs">
+          <img
+            src={logo}
+            alt="Home"
+            className="logo"
+            onClick={() => {
+              // alert('Logo clicked!');
+              navigate("/");
+            }}
+          />
+          <li>
+            {location === "home" ? (
+              <div className="tab" onClick={scrollToServicesAnchor}>
+                Services
+              </div>
+            ) : (
+              <div className="tab" onClick={goToHomeAndScrollServices}>
+                Services
+              </div>
+            )}
           </li>
-        ))}
-      </ul>
-    </div>
+          {tabsData.map((tab, index) => (
+            <li key={tab.label}>
+              <div
+                className="tab"
+                onClick={() => {
+                  handleTabClick(tab.path);
+                }}
+                style={activeTab === tab.path ? { color: "#159cf6" } : {}}
+              >
+                {tab.label}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Fade>
   );
 }
 
