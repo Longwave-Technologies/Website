@@ -39,11 +39,13 @@ function HomePage() {
         <div className="information-section" id="services-section">
           <h1>Services</h1>
           <div className="information-section-grid">
-            <img
-              src={home_copier}
-              className="info-section-img"
-              alt="copy img"
-            ></img>
+            <div className="info-section-text-div">
+              <img
+                src={home_copier}
+                className="info-section-img"
+                alt="copy img"
+              ></img>
+            </div>
             <div className="info-section-text-div">
               <h2>Sales & Lease</h2>
               <ul classname="info-section-list">
@@ -72,11 +74,13 @@ function HomePage() {
                 <li>Service contracts for maintenance only</li>
               </ul>
             </div>
-            <img
-              src={home_tech}
-              className="info-section-img"
-              alt="copy img"
-            ></img>
+            <div className="info-section-text-div">
+              <img
+                src={home_tech}
+                className="info-section-img"
+                alt="copy img"
+              ></img>
+            </div>
           </div>
         </div>
       </Element>
@@ -107,7 +111,9 @@ function HomePage() {
           life easier
         </h3>
         <div className="information-section-grid">
-          <img src={oldpic} className="info-section-img" alt="copy img"></img>
+          <div className="info-section-text-div">
+            <img src={oldpic} className="info-section-img" alt="copy img"></img>
+          </div>
           <div className="info-section-text-div">
             <h2>It all started in 1991...</h2>
             <p className="info-section-para">
@@ -131,11 +137,13 @@ function HomePage() {
               </p>
             </p>
           </div>
-          <img
-            src={about_customer}
-            className="info-section-img"
-            alt="copy img"
-          ></img>
+          <div className="info-section-text-div">
+            <img
+              src={about_customer}
+              className="info-section-img"
+              alt="copy img"
+            ></img>
+          </div>
         </div>
       </div>
       <Link

@@ -370,10 +370,19 @@ ul {
     align-items: center;
     margin: auto;
   }
+  .info-section-text-div:nth-child(3) {
+    order: 4;
+  }
+  .info-section-text-div:nth-child(4) {
+    order: 3;
+  }
   .info-section-img {
     width: 300px;
   }
   .info-section-text-div {
     width: 300px;
+  }
+  info-section-text-div:nth-child(n + 1) {
+    grid-column: 1 / 2;
   }
 }
