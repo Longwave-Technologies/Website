@@ -70,7 +70,7 @@ function HomePage() {
                     options
                   </li>
                   <li>
-                    <Link className="button" to="/Product">
+                    <Link className="button" to="/product">
                       <strong>Click here to view our product offerings!</strong>
                     </Link>
                   </li>
