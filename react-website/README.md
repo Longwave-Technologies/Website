@@ -2,8 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Package libraries need to install
+
+- npm
+- react-scroll
+- @formspree/react
+
 ## Available Scripts
 
+Note: Make sure to run `npm` commands in the /react-website directory.
 In the project directory, you can run:
 
 ### `npm start`

@@ -9,6 +9,9 @@
 .contact-description {
   line-height: 1.4;
 }
+h3 {
+  text-decoration: none;
+}
 
 /* Styling for each text field and animation*/
 * {
@@ -23,7 +26,7 @@
 .textarea textarea {
   position: relative;
   display: block;
-  width: 100%;
+  width: 90%;
   height: 1rem;
   border: none;
   font-size: 1.5rem;
@@ -113,7 +116,7 @@
     position: absolute;
     bottom: 3rem;
     height: 2px;
-    width: 107%;
+    width: 90%;
   }
 
   #firstname-underline:before,
@@ -121,8 +124,7 @@
   #address-underline:before,
   #city-underline:before,
   #zipcode-underline:before {
-    width: 104%;
-    translate: 2px;
+    width: 90%;
   }
 
   #firstname-label,
@@ -191,7 +193,7 @@
     position: absolute;
     bottom: 0;
     height: 2px;
-    width: 110%;
+    width: 100%;
     left: 0;
   }
   .contact-description {

@@ -17,8 +17,8 @@ function ContactPage() {
           <h3 className="contact-description">
             To find the best solution for you. <br></br>
             <br></br>
-            Fill out and submit the form below or contact us at: <br></br>☎
-            (516)-663-0968 <br></br>✉ longwavetechinfo@gmail.com
+            Fill out and submit the form below <br></br>or contact us at:{" "}
+            <br></br>☎ (516)-663-0968 <br></br>✉ longwavetechinfo@gmail.com
           </h3>
           <div class="form_row_with_grid">
             <div class="form-field">
