@@ -1,9 +1,3 @@
-@font-face {
-  font-family: Questrial;
-  src: url(/src/styles/font/Questrial-Regular.ttf) format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
 /* Style for the header element */
 .header {
   position: fixed;

@@ -1,3 +1,10 @@
 .content {
   margin-top: 100px;
 }
+.product-container {
+  width: 200px;
+  height: 500px;
+  padding-top: 200px;
+  line-height: 2;
+  margin: auto;
+}

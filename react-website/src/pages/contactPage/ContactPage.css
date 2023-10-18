@@ -16,7 +16,6 @@ h3 {
 /* Styling for each text field and animation*/
 * {
   outline: none;
-  font-family: Questrial, sans-serif;
 }
 .form-field {
   margin: 0px 4rem 0px 4rem;

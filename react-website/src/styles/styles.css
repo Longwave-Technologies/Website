@@ -1,9 +1,15 @@
 @font-face {
-  font-family: Questrial;
-  src: url(/src/styles/font/Questrial-Regular.ttf) format("ttf");
+  font-family: "Questrial";
+  src: url("./font/Questrial-Regular.eot");
+  src: url("./font/Questrial-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./font/Questrial-Regular.woff2") format("woff2"),
+    url("./font/Questrial-Regular.woff") format("woff"),
+    url("./font/Questrial-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
+
 body {
   font-family: Questrial, sans-serif;
 }

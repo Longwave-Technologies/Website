@@ -1,11 +1,8 @@
-html {
+import html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-}
-@font-face {
-  font-family: Questrial;
-  src: url(/src/styles/font/Questrial-Regular.ttf) format("ttf");
+  font-family: Questrial, sans-serif;
 }
