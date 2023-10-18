@@ -5,7 +5,7 @@ function ProductPage() {
   return (
     <div className="content">
       <div>
-        <h2>ProductPage</h2>
+        <h2>Products page is a work in progress! Check in next week</h2>
       </div>
     </div>
   );

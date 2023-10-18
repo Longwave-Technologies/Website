@@ -7,7 +7,6 @@
 /* Style for the header element */
 .header {
   position: fixed;
-  top: 0;
   background-color: #fff;
   display: flex;
   justify-content: center;

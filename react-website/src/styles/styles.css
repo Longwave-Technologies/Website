@@ -29,6 +29,9 @@ li {
   font-size: 20px;
   line-height: 1.4;
 }
+input {
+  font-size: 20px;
+}
 
 a:hover {
   cursor: pointer;

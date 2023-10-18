@@ -12,12 +12,12 @@
   top: -1000px;
 }
 .dot1 {
-  height: 1500px;
-  width: 1500px;
+  height: 1400px;
+  width: 1400px;
   background-color: #e7f2ff;
   border-radius: 50%;
   position: absolute;
-  top: 1600px;
+  top: 1700px;
   left: -700px;
   &:before {
     animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
@@ -27,17 +27,17 @@
   }
 }
 .dot2 {
-  height: 2250px;
-  width: 2250px;
+  height: 2400px;
+  width: 2400px;
   background-color: #cfe5ff;
   border-radius: 50%;
   position: absolute;
-  top: 1150px;
-  left: -925px;
+  top: 1200px;
+  left: -975px;
 }
 .dot3 {
-  height: 3375px;
-  width: 3375px;
+  height: 3570px;
+  width: 3570px;
   background-color: #b7d9ff;
   border-radius: 50%;
   position: absolute;
