@@ -27,7 +27,7 @@ function HomePage() {
   }
   return (
     <div className="content">
-      <Fade>
+      <Fade bottom>
         <div className="parallax-container">
           <div className="text-overlay">
             <Fade up>
@@ -41,7 +41,7 @@ function HomePage() {
           </div>
         </div>
       </Fade>
-      <Element name="services-anchor">
+      <Element name="services-anchor" id="services-anchor">
         <div className="information-section" id="services-section">
           <Fade bottom>
             <h1>Services</h1>
