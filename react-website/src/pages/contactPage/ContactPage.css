@@ -176,14 +176,18 @@ h3 {
   appearance: button;
   padding: 0.8rem;
   border: none;
-  color: antiquewhite;
+  color: white;
   background-color: rgb(165, 165, 165);
 }
 .submitbtn:hover {
   background-color: #0c84f4;
   transition-duration: 0.5s;
-  color: antiquewhite;
+  color: white;
   transform: scale(1.1);
+}
+.submitbtn:active {
+  background-color: #0b68c0;
+  transform: scale(0.95);
 }
 
 @media (max-width: 600px) {

@@ -53,7 +53,6 @@ function HomePage() {
                 </li>
                 <li>
                   <Link className="button" to="/Product">
-                    {" "}
                     <strong>Click here to view our product offerings!</strong>
                   </Link>
                 </li>
@@ -139,8 +138,10 @@ function HomePage() {
         <div id="fpc_effect-back">
           <div id="fpc_box">
             <div id="fpc_content">
-              <h1> Ready to boost your productivity?</h1>
-              <h3> Click here</h3>
+              <h1 className="page_curl_button">
+                Ready to boost your productivity?
+                <h3> Click here</h3>
+              </h1>
             </div>
             <div id="fpc_corner-box">
               <div id="fpc_page-tip">
@@ -154,7 +155,7 @@ function HomePage() {
               </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </Link>
     </div>
   );

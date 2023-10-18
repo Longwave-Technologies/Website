@@ -98,8 +98,16 @@ ul {
   text-decoration: none;
   color: #000;
 }
-.button:hover {
-  color: #0c84f4;
+.page_curl_button {
+  color: #000;
+}
+.page_curl_button:hover {
+  color: #0e86f7;
+  transform: scale(103%);
+}
+.page_curl_button:active {
+  color: #0a5398;
+  transform: scale(0.95);
 }
 
 /*Contact Page Link corner page curl*/
@@ -184,11 +192,12 @@ ul {
   height: 100px;
   width: 100px;
 }
-#fpc_box div#fpc_corner-box:hover {
-  /* edit corner size (Second animation, when the corner itself is rollovered) */
-  height: 100px;
-  width: 100px;
+#fpc_box:active #fpc_corner-box {
+  /* edit corner size (First animation, when the whole page is rollovered) */
+  height: 300px;
+  width: 300px;
 }
+
 #fpc_corner-box:before {
   position: absolute;
   top: 0;
@@ -336,14 +345,20 @@ ul {
 
   #fpc_box:hover #fpc_corner-box {
     /* edit corner size (First animation, when the whole page is rollovered) */
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
   }
   #fpc_box div#fpc_corner-box:hover {
     /* edit corner size (Second animation, when the corner itself is rollovered) */
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
+  #fpc_box:active #fpc_corner-box {
+    /* edit corner size (First animation, when the whole page is rollovered) */
+    height: 200px;
+    width: 200px;
+  }
+
   .sub-title-text {
     padding: 0px 30px 0px 30px;
   }
