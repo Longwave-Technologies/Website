@@ -37,7 +37,7 @@ function Header({ tabsData }) {
     });
   };
   return (
-    <Fade top>
+    <Fade>
       <div className="header">
         <ul className="tabs">
           <img
