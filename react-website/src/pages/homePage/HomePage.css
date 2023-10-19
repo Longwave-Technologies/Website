@@ -106,6 +106,7 @@ ul {
 .page_curl_button:hover {
   color: #0e86f7;
   transform: scale(103%);
+  width: 100%;
 }
 .page_curl_button:active {
   color: #0a5398;
@@ -129,7 +130,7 @@ ul {
   color: #0c84f4;
 }
 #fpc_content {
-  padding: 20px 20px 20px 180px;
+  padding: 20px 0px 20px 80px;
 }
 #fpc_content:before {
   content: "";
@@ -336,7 +337,7 @@ ul {
     width: 100%; /* trivial */
   }
   #fpc_content {
-    padding: 20px 10px 10px 25%;
+    padding: 20px 0px 20px 90px;
     margin: 0px;
     justify-content: center;
   }
