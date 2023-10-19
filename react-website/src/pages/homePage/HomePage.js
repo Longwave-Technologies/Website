@@ -190,7 +190,7 @@ function HomePage() {
           <div id="fpc_effect-back">
             <div id="fpc_box">
               <div id="fpc_content">
-                <h2 className="page_curl_button">
+                <h2 className="page-curl-button">
                   Ready to boost your productivity?
                   <h3> Click here</h3>
                 </h2>

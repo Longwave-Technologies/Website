@@ -100,18 +100,25 @@ ul {
   text-decoration: none;
   color: #000;
 }
-.page_curl_button {
+.page-curl-button {
   padding-top: 20px;
   color: #000;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
-.page_curl_button:hover {
+.page-curl-button:hover {
   color: #0e86f7;
   transform: scale(103%);
   width: 100%;
 }
-.page_curl_button:active {
+.page-curl-button:active {
   color: #0a5398;
   transform: scale(0.95);
+}
+.page-curl-button h3 {
+  color: #0c84f4;
+  margin: 20px auto;
 }
 
 /*Contact Page Link corner page curl*/
@@ -136,7 +143,7 @@ ul {
 #fpc_content:before {
   content: "";
   width: 160px;
-  height: 160px;
+  height: 200px;
   float: right;
 }
 #fpc_page-tip:before,
@@ -344,7 +351,7 @@ ul {
   }
   #fpc_content:before {
     width: 100px;
-    height: 100px;
+    height: 200px;
   }
 
   #fpc_box:hover #fpc_corner-box {
