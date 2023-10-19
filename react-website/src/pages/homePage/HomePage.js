@@ -1,5 +1,5 @@
-import "./HomePage.css";
 import "../../styles/styles.css";
+import "./HomePage.css";
 import { Link, useNavigate } from "react-router-dom";
 import canon from "../../assets/images/brands/canon.png";
 import brother from "../../assets/images/brands/brother.png";
@@ -127,11 +127,13 @@ function HomePage() {
       </Fade>
       <div className="information-section" id="About">
         <Fade bottom>
-          <h1>Our Story</h1>
-          <h3 className="sub-title-text">
-            We are passionate about partnering with good people and making their
-            life easier
-          </h3>
+          <div>
+            <h1>Our Story</h1>
+            <h3 id="sub-title-text">
+              We are passionate about partnering with good people and making
+              their life easier
+            </h3>
+          </div>
         </Fade>
         <div className="information-section-grid">
           <Fade left>
