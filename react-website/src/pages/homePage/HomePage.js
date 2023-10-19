@@ -160,13 +160,11 @@ function HomePage() {
             <div className="info-section-text-div">
               <h2>Our valued clients</h2>
               <p className="info-section-para">
-                <p>
-                  We have provided quality service to satisfied customers that
-                  have been with us for over 20 years. Our clients are in
-                  industries such as banking, architecture, construction,
-                  manufacturing, logistics, medical, law, accounting, insurance,
-                  education, nonprofits, travel, realty , and more.
-                </p>
+                We have provided quality service to satisfied customers that
+                have been with us for over 20 years. Our clients are in
+                industries such as banking, architecture, construction,
+                manufacturing, logistics, medical, law, accounting, insurance,
+                education, nonprofits, travel, realty , and more.
               </p>
             </div>
           </Fade>

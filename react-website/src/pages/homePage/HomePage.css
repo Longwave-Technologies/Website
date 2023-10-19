@@ -130,7 +130,7 @@ ul {
   color: #0c84f4;
 }
 #fpc_content {
-  padding: 20px 0px 20px 80px;
+  padding: 20px 0px 20px 160px;
 }
 #fpc_content:before {
   content: "";
@@ -337,7 +337,7 @@ ul {
     width: 100%; /* trivial */
   }
   #fpc_content {
-    padding: 20px 0px 20px 90px;
+    padding: 20px 0px 20px 100px;
     margin: 0px;
     justify-content: center;
   }
