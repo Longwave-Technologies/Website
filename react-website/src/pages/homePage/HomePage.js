@@ -1,5 +1,5 @@
-import "./HomePage.css";
 import "../../styles/styles.css";
+import "./HomePage.css";
 import { Link, useNavigate } from "react-router-dom";
 import canon from "../../assets/images/brands/canon.png";
 import brother from "../../assets/images/brands/brother.png";
@@ -23,24 +23,22 @@ function HomePage() {
   const navigate = useNavigate();
   function delayAndGo(e, path) {
     e.preventDefault();
-    setTimeout(() => navigate(path), 300);
+    setTimeout(() => navigate(path), 100);
   }
   return (
     <div className="content">
-      <Fade bottom>
-        <div className="parallax-container">
-          <div className="text-overlay">
-            <Fade up>
-              <p>
-                Going between digital and paper has never been easier. Longwave
-                provides the perfect office imaging solution for your
-                organization. We prioritize quality services and exceeding
-                customer expectations.
-              </p>
-            </Fade>
-          </div>
+      <div className="parallax-container">
+        <div className="text-overlay">
+          <Fade up>
+            <p>
+              Going between digital and paper has never been easier. Longwave
+              provides the perfect office imaging solution for your
+              organization. We prioritize quality services and exceeding
+              customer expectations.
+            </p>
+          </Fade>
         </div>
-      </Fade>
+      </div>
       <Element name="services-anchor" id="services-anchor">
         <div className="information-section" id="services-section">
           <Fade bottom>
@@ -129,11 +127,13 @@ function HomePage() {
       </Fade>
       <div className="information-section" id="About">
         <Fade bottom>
-          <h1>Our Story</h1>
-          <h3 className="sub-title-text">
-            We are passionate about partnering with good people and making their
-            life easier
-          </h3>
+          <div>
+            <h1>Our Story</h1>
+            <h3 id="sub-title-text">
+              We are passionate about partnering with good people and making
+              their life easier
+            </h3>
+          </div>
         </Fade>
         <div className="information-section-grid">
           <Fade left>
@@ -162,13 +162,11 @@ function HomePage() {
             <div className="info-section-text-div">
               <h2>Our valued clients</h2>
               <p className="info-section-para">
-                <p>
-                  We have provided quality service to satisfied customers that
-                  have been with us for over 20 years. Our clients are in
-                  industries such as banking, architecture, construction,
-                  manufacturing, logistics, medical, law, accounting, insurance,
-                  education, nonprofits, travel, realty , and more.
-                </p>
+                We have provided quality service to satisfied customers that
+                have been with us for over 20 years. Our clients are in
+                industries such as banking, architecture, construction,
+                manufacturing, logistics, medical, law, accounting, insurance,
+                education, nonprofits, travel, realty , and more.
               </p>
             </div>
           </Fade>
@@ -192,10 +190,10 @@ function HomePage() {
           <div id="fpc_effect-back">
             <div id="fpc_box">
               <div id="fpc_content">
-                <h1 className="page_curl_button">
+                <h2 className="page-curl-button">
                   Ready to boost your productivity?
                   <h3> Click here</h3>
-                </h1>
+                </h2>
               </div>
               <div id="fpc_corner-box">
                 <div id="fpc_page-tip">

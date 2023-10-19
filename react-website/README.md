@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Package libraries need to install
 
-- npm
+- npm install
 - npm install react-scroll --save
 - npm install @formspree/react --save
 - npm install react-reveal --save
