@@ -76,7 +76,7 @@ function ProductPage() {
           <div className="productFilter">
 
                 {filteredProducts?.map((category) => (
-                  <ul className="filterSubheading">{category}
+                  <ul className="filterSubheading">{category.brands}
                   <li key={category.brands} >
                     <label>
                       <input type="checkbox" />
