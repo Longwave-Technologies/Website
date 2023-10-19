@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../styles/styles.css";
 import "./ProductPage.css";
 import Fade from "react-reveal/Fade";
+import ProductInfo from './ProductInfo';
+import ProductList from './ProductList';
+import Category from '../../assets/images/products/productCategories.json';
+import CopierInfo from '../../assets/images/products/copierInfo.json';
 
 function ProductPage() {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(Category);
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState({}); // You can define filter options here
 
@@ -13,7 +17,8 @@ function ProductPage() {
     // Simulate fetching product data from an API
     const fetchProducts = async () => {
       try {
-        const response = await fetch('api/products');
+        const response = await fetch(CopierInfo);
+        console.log(response);//
         const data = await response.json();
         setProducts(data);
         setFilteredProducts(data);
@@ -47,39 +52,47 @@ function ProductPage() {
     const filtered = products.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
+    console.log(query.target.value);
+
     setFilteredProducts(filtered);
   };
 
   return (
     <div className="content">
-<<<<<<< Updated upstream
       <div className="product-container">
-        <h2>Products page is a work in progress! Check in next week</h2>
-=======
-      <h2>Products page is a work in progress! Check in next week</h2>
+        <div className="left-container">
+          <div className="productSearch">
+            <input
+              type="search"
+              id="mySearch"
+              name="q"
+              placeholder="Search products"
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value) }
+            />
+            <button>Search</button>
+          </div>
 
-      <input
-        type="text"
-        placeholder="Search products"
-        value={searchQuery}
-        onChange={(e) => handleSearch(e.target.value)}
-      />
+          <div className="productFilter">
 
-      <div className="filters">
-        {/* Filter components here */}
->>>>>>> Stashed changes
+                {filteredProducts?.map((category) => (
+                  <ul className="filterSubheading">{category}
+                  <li key={category.brands} >
+                    <label>
+                      <input type="checkbox" />
+                        <span>{category.brands}
+                        </span>
+                      </label>
+                  </li>
+                  </ul>
+                )) }
+          </div>
+        </div>
+        <div className="right-container">
+          {/* <ProductList className="productList"/> */}
+        </div>
       </div>
-
-      <ul>
-        {filteredProducts.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.category} - ${product.price}
-          </li>
-        ))}
-      </ul>
     </div>
   );
-
 }
-
 export default ProductPage;

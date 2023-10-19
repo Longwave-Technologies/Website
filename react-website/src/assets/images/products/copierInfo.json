@@ -1,0 +1,26 @@
+[
+    {
+    "id": 1,
+    "image": "small-kyocera.jpg",
+    "parts":"copier",
+    "brand": "Kyocera",
+    "subCategory": "Ecosys",
+    "modelnum": "1",
+    "color": "bw", 
+    "ppm": "30",
+    "specifications": ["bullet 1", "bullet 2"],
+    "description": "description 1"
+    },
+    {
+    "id": 2,
+    "image": "small-canon.jpg",
+    "brand": "Canon",
+    "subCategory": "imageRunner",
+    "modelnum": "2",
+    "color": "color", 
+    "ppm": "40",
+    "specifications": ["bullet 3", "bullet 4"],
+    "description": "description 2"
+    }
+]
+  
