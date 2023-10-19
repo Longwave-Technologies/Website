@@ -27,20 +27,18 @@ function HomePage() {
   }
   return (
     <div className="content">
-      <Fade bottom>
-        <div className="parallax-container">
-          <div className="text-overlay">
-            <Fade up>
-              <p>
-                Going between digital and paper has never been easier. Longwave
-                provides the perfect office imaging solution for your
-                organization. We prioritize quality services and exceeding
-                customer expectations.
-              </p>
-            </Fade>
-          </div>
+      <div className="parallax-container">
+        <div className="text-overlay">
+          <Fade up>
+            <p>
+              Going between digital and paper has never been easier. Longwave
+              provides the perfect office imaging solution for your
+              organization. We prioritize quality services and exceeding
+              customer expectations.
+            </p>
+          </Fade>
         </div>
-      </Fade>
+      </div>
       <Element name="services-anchor" id="services-anchor">
         <div className="information-section" id="services-section">
           <Fade bottom>
@@ -192,10 +190,10 @@ function HomePage() {
           <div id="fpc_effect-back">
             <div id="fpc_box">
               <div id="fpc_content">
-                <h1 className="page_curl_button">
+                <h2 className="page_curl_button">
                   Ready to boost your productivity?
                   <h3> Click here</h3>
-                </h1>
+                </h2>
               </div>
               <div id="fpc_corner-box">
                 <div id="fpc_page-tip">
