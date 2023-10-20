@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react';
 import ProductInfo from './ProductInfo';
 
 function ProductList({ products }) {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(products);
+  const [clicked, setClicked] = useState(false)
 
   const handleProductClick = (product) => {
+    setClicked(true);
+    alert(product.target.value)
     setSelectedProduct(product);
   };
+
 
   useEffect(() => {
     // Fetch product data from a JSON file or API
@@ -16,18 +20,22 @@ function ProductList({ products }) {
   }, []);
 
   return (
-    <div>
-      <ul>
-        {products?.map((selectedProduct) => (
-          <ProductInfo
+    <div className="productList">
+        <ProductInfo className="productInfo"
             key={selectedProduct.id}
             product={selectedProduct}
-            onSelect={handleProductClick}
-          />
-        ))}
-      </ul>
-      <ProductInfo selectedItem={selectedProduct} className="productInfo" />
-
+            onSelect={selectedProduct}
+        />
+      {selectedProduct?.map((selectedProduct) => (
+        <ul className="productListDetails"  key={selectedProduct.id} 
+        > 
+          <li>{selectedProduct.image}</li>
+          <li>{selectedProduct.brand} {selectedProduct.subCategory}</li>
+          <li>{selectedProduct.modelnum}</li>
+ 
+        </ul>
+      ))}
+      
      </div>
   );
 }

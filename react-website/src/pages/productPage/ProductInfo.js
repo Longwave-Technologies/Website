@@ -2,30 +2,33 @@ import React, { useState } from 'react';
 import CopierInfo from '../../assets/images/products/copierInfo.json';
 
 function ProductInfo({ selectedItem }) {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(selectedItem);
 
   return (
     <div className='content'>
       <ul>
         <li className='image'>  
-            {selectedItem.image}
+            {/* {selectedItem.image} */}
+        </li>
+        <li className='parts'>  
+            {/* {selectedItem.parts} */}
         </li>
         <li className='brand'>  
-            {selectedItem.brand}
+            {/* {selectedItem.brand} */}
         </li>      
         <li className='subCategory'>  
-            {selectedItem.subCategory}
+            {/* {selectedItem.subCategory} */}
         </li>        
         <li className='modelnum'>  
-            {selectedItem.modelnum}
+            {/* {selectedItem.modelnum} */}
         </li>
         <li className='specifications'>  
-            {selectedItem.color}
+            {/* {selectedItem.color}
             {selectedItem.ppm}
-            {selectedItem.specifications}
+            {selectedItem.specifications} */}
         </li>
         <li className='description'>  
-            {selectedItem.description}
+            {/* {selectedItem.description} */}
          </li>
       </ul>
     </div>

@@ -5,22 +5,26 @@
     "parts":"copier",
     "brand": "Kyocera",
     "subCategory": "Ecosys",
-    "modelnum": "1",
+    "modelnum": "1xx",
     "color": "bw", 
     "ppm": "30",
-    "specifications": ["bullet 1", "bullet 2"],
-    "description": "description 1"
+    "specifications": {"function":"bullet 1", "drawer":"bullet 2"},
+    "description": "description 1",
+    "toners":{"bw":"1","magenta":"2", "cyan":"3", "yellow":"4"}
     },
     {
     "id": 2,
     "image": "small-canon.jpg",
+    "parts":"copier",
     "brand": "Canon",
     "subCategory": "imageRunner",
-    "modelnum": "2",
+    "modelnum": "2xx",
     "color": "color", 
     "ppm": "40",
-    "specifications": ["bullet 3", "bullet 4"],
-    "description": "description 2"
+    "specifications": {"function":"bullet 3", "drawer":"bullet 4"},
+    "description": "description 2",
+    "toners":{"bw":"11","magenta":"22", "cyan":"33", "yellow":"44"}
+
     }
 ]
   

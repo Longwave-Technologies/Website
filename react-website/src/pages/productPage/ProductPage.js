@@ -8,7 +8,7 @@ import Category from '../../assets/images/products/productCategories.json';
 import CopierInfo from '../../assets/images/products/copierInfo.json';
 
 function ProductPage() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(CopierInfo);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState(Category); // You can define filter options here
@@ -83,7 +83,9 @@ function ProductPage() {
                   {obj[Object.keys(obj)].map((item,i)=>(
                     <li key={i}>
                     <label>
-                      <input type="checkbox" />
+                      <input type="checkbox" 
+                        value={filteredProducts}
+                      />
                         <span>{uppercaseFirst(item)}
                         </span>
                       </label>
@@ -91,10 +93,14 @@ function ProductPage() {
                   ))}
                   </ul>
                 )) }
+            <button className="filterSearch"
+              // filteredProducts={handleFilterChange()}
+            >Search</button>
           </div>
         </div>
+
         <div className="right-container">
-          {/* <ProductList className="productList"/> */}
+          <ProductList className="productList" products={products} />
         </div>
       </div>
     </div>
