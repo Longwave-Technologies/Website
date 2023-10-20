@@ -57,6 +57,10 @@ function ProductPage() {
     setFilteredProducts(filtered);
   };
 
+  const uppercaseFirst= (word) => {
+    return word[0].toUpperCase() + word.slice(1);
+  }
+
   return (
     <div className="content">
       <div className="product-container">
@@ -75,12 +79,12 @@ function ProductPage() {
 
           <div className="productFilter">
                 {filters?.map((obj, index) => (
-                  <ul className="filterSubheading">{Object.keys(obj)}
+                  <ul className="filterSubheading">{uppercaseFirst(Object.keys(obj))}
                   {obj[Object.keys(obj)].map((item,i)=>(
                     <li key={i}>
                     <label>
                       <input type="checkbox" />
-                        <span>{item}
+                        <span>{uppercaseFirst(item)}
                         </span>
                       </label>
                     </li>
