@@ -72,20 +72,7 @@ function ProductPage() {
             />
             <button>Search</button>
           </div>
-{/* 
-          <div className="productFilter">
-                {filteredProducts?.map((Category,index) => (
-                  <ul className="filterSubheading">{Category.index}
-                  <li key={Category.index} >
-                    <label>
-                      <input type="checkbox" />
-                        <span>{Category.index}
-                        </span>
-                      </label>
-                  </li>
-                  </ul>
-                )) }
-          </div> */}
+
           <div className="productFilter">
                 {filters?.map((obj, index) => (
                   <ul className="filterSubheading">{Object.keys(obj)}
