@@ -7,6 +7,17 @@ Deploy and update on the server: `npm run deploy`
 
 Deploy locally: `npm start`
 
+Save locally and pulling from remote:
+  You are working on some unfinished feature and you need to save this (draft):
+    ``` git stash
+              or 
+              git stash save "feature X"
+    ```
+  Now you pull the code:
+    ```git pull origin master```
+  Restore the work you were doing for feature X using below command:
+    ``` git stash apply```
+
 Proper git development: https://medium.com/@anjulapaulus_84798/beginners-guide-to-proper-git-workflow-35a2d967734e
   ```
   git checkout master

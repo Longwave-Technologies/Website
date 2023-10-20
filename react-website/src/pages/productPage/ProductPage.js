@@ -9,9 +9,9 @@ import CopierInfo from '../../assets/images/products/copierInfo.json';
 
 function ProductPage() {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(Category);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filters, setFilters] = useState({}); // You can define filter options here
+  const [filters, setFilters] = useState(Category); // You can define filter options here
 
   useEffect(() => {
     // Simulate fetching product data from an API
@@ -72,18 +72,32 @@ function ProductPage() {
             />
             <button>Search</button>
           </div>
-
+{/* 
           <div className="productFilter">
-
-                {filteredProducts?.map((category,index) => (
-                  <ul className="filterSubheading">{category.brands[index]}
-                  <li key={category.brands} >
+                {filteredProducts?.map((Category,index) => (
+                  <ul className="filterSubheading">{Category.index}
+                  <li key={Category.index} >
                     <label>
                       <input type="checkbox" />
-                        <span>{category.brands}
+                        <span>{Category.index}
                         </span>
                       </label>
                   </li>
+                  </ul>
+                )) }
+          </div> */}
+          <div className="productFilter">
+                {filters?.map((obj, index) => (
+                  <ul className="filterSubheading">{Object.keys(obj)}
+                  {obj[Object.keys(obj)].map((item,i)=>(
+                    <li key={i}>
+                    <label>
+                      <input type="checkbox" />
+                        <span>{item}
+                        </span>
+                      </label>
+                    </li>
+                  ))}
                   </ul>
                 )) }
           </div>
