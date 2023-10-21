@@ -5,9 +5,9 @@
     "parts":"copier",
     "brand": "Kyocera",
     "subCategory": "Ecosys",
-    "modelnum": "1xx",
+    "modelnum": "1xx6",
     "color": "bw", 
-    "ppm": "30",
+    "ppm": "60",
     "specifications": {"function":"bullet 1", "drawer":"bullet 2"},
     "description": "description 1",
     "toners":{"bw":"1","magenta":"2", "cyan":"3", "yellow":"4"}
@@ -25,6 +25,19 @@
     "description": "description 2",
     "toners":{"bw":"11","magenta":"22", "cyan":"33", "yellow":"44"}
 
-    }
+    },
+    {
+        "id": 3,
+        "image": "big-kyocera.jpg",
+        "parts":"copier",
+        "brand": "Kyocera2",
+        "subCategory": "Ecosys",
+        "modelnum": "1xx6yy",
+        "color": "bw", 
+        "ppm": "60",
+        "specifications": {"function":"bullet 1", "drawer":"bullet 2"},
+        "description": "description 1",
+        "toners":{"bw":"1","magenta":"2", "cyan":"3", "yellow":"4"}
+        }
 ]
   

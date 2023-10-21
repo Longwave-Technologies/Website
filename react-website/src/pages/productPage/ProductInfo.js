@@ -4,33 +4,37 @@ import CopierInfo from '../../assets/images/products/copierInfo.json';
 function ProductInfo({ selectedItem }) {
   const [selectedProduct, setSelectedProduct] = useState(selectedItem);
 
+  const handleExit = () => {
+    setSelectedProduct(null);
+  };
+
   return (
     <div className='content'>
-      <ul>
+      <h2>Product Details</h2>
+      {/* <ul>
         <li className='image'>  
-            {/* {selectedItem.image} */}
+            {selectedProduct.image}
         </li>
         <li className='parts'>  
-            {/* {selectedItem.parts} */}
+            {selectedProduct.parts}
         </li>
         <li className='brand'>  
-            {/* {selectedItem.brand} */}
+            {selectedProduct.brand}
         </li>      
         <li className='subCategory'>  
-            {/* {selectedItem.subCategory} */}
+            {selectedProduct.subCategory}
         </li>        
         <li className='modelnum'>  
-            {/* {selectedItem.modelnum} */}
+            {selectedProduct.modelnum}
         </li>
         <li className='specifications'>  
-            {/* {selectedItem.color}
-            {selectedItem.ppm}
-            {selectedItem.specifications} */}
+            {selectedProduct.color}
+            {selectedProduct.ppm}
+            {selectedProduct.specifications}
         </li>
-        <li className='description'>  
-            {/* {selectedItem.description} */}
-         </li>
       </ul>
+      <p>Description: {selectedProduct.description}</p> */}
+      <button onClick={handleExit}>Back</button>
     </div>
   );
 }

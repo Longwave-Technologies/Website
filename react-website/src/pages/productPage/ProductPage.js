@@ -9,7 +9,7 @@ import CopierInfo from '../../assets/images/products/copierInfo.json';
 
 function ProductPage() {
   const [products, setProducts] = useState(CopierInfo);
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(CopierInfo);
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState(Category); // You can define filter options here
 
@@ -18,7 +18,7 @@ function ProductPage() {
     const fetchProducts = async () => {
       try {
         const response = await fetch(CopierInfo);
-        console.log(response);//
+        console.log(response);
         const data = await response.json();
         setProducts(data);
         setFilteredProducts(data);
@@ -26,7 +26,6 @@ function ProductPage() {
         console.error('Error fetching products:', error);
       }
     };
-
     fetchProducts();
   }, []);
 
@@ -49,17 +48,28 @@ function ProductPage() {
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    const filtered = products.filter((product) =>
-      product.name.toLowerCase().includes(query.toLowerCase())
+    const filtered = CopierInfo.filter((product) =>
+      product.modelnum?.toLowerCase().includes(query?.toLowerCase())
     );
-    console.log(query.target.value);
-
-    setFilteredProducts(filtered);
+    console.log("cateogory"+Category);
+    console.log("query"+query);
+    console.log("filtered"+filtered.modelnum);
+    console.log("setProducts"+setProducts(filtered));
+    return setFilteredProducts(filtered);
   };
+
+
+
 
   const uppercaseFirst= (word) => {
     return word[0].toUpperCase() + word.slice(1);
   }
+
+
+  const handleProductClick = (product) => {
+    alert(product.target.value)
+    setProducts(product.target);
+  };
 
   return (
     <div className="content">
@@ -74,10 +84,10 @@ function ProductPage() {
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value) }
             />
-            <button>Search</button>
+            {/* <button type="submit">Search</button> */}
           </div>
 
-          <div className="productFilter">
+          {/* <div className="productFilter">
                 {filters?.map((obj, index) => (
                   <ul className="filterSubheading">{uppercaseFirst(Object.keys(obj))}
                   {obj[Object.keys(obj)].map((item,i)=>(
@@ -96,11 +106,26 @@ function ProductPage() {
             <button className="filterSearch"
               // filteredProducts={handleFilterChange()}
             >Search</button>
-          </div>
+          </div> */}
         </div>
 
         <div className="right-container">
-          <ProductList className="productList" products={products} />
+
+          {filteredProducts?.map((selectedProduct) => (
+          <ul className="productListDetails"  key={selectedProduct.id} 
+            onClick={handleProductClick}
+          > 
+            <li>{selectedProduct.image}</li>
+            <li>{selectedProduct.brand} {selectedProduct.subCategory}</li>
+            <li>{selectedProduct.modelnum}</li>
+  
+          </ul>
+        ))}
+          
+          {/* <ProductList className="productList" 
+            products={products} 
+            /> */}
+
         </div>
       </div>
     </div>
