@@ -8,7 +8,7 @@
     "modelnum": "1xx6",
     "color": "bw", 
     "ppm": "60",
-    "specifications": {"function":"bullet 1", "drawer":"bullet 2"},
+    "specifications":{"function":"bullet 1", "drawer":"bullet 2"},
     "description": "description 1",
     "toners":{"bw":"1","magenta":"2", "cyan":"3", "yellow":"4"}
     },
@@ -37,7 +37,7 @@
         "ppm": "60",
         "specifications": {"function":"bullet 1", "drawer":"bullet 2"},
         "description": "description 1",
-        "toners":{"bw":"1","magenta":"2", "cyan":"3", "yellow":"4"}
+        "toners":{"bw":"1a","magenta":"2b", "cyan":"3", "yellow":"4"}
         }
 ]
   

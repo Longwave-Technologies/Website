@@ -12,22 +12,24 @@ function ProductPage() {
   const [filteredProducts, setFilteredProducts] = useState(CopierInfo);
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState(Category); // You can define filter options here
+  const [selectedProductDetail, setSelectedProductDetail] = useState(null);
 
-  useEffect(() => {
-    // Simulate fetching product data from an API
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(CopierInfo);
-        console.log(response);
-        const data = await response.json();
-        setProducts(data);
-        setFilteredProducts(data);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   // Simulate fetching product data from an API
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await fetch(CopierInfo);
+  //       console.log(response);
+  //       const data = await response.json();
+  //       setProducts(data);
+  //       setFilteredProducts(data);
+  //       setSelectedProductDetail(data);
+  //     } catch (error) {
+  //       console.error('Error fetching products:', error);
+  //     }
+  //   };
+  //   fetchProducts();
+  // }, []);
 
   const handleFilterChange = (filterName, value) => {
     // Update filter values
@@ -49,7 +51,11 @@ function ProductPage() {
   const handleSearch = (query) => {
     setSearchQuery(query);
     const filtered = CopierInfo.filter((product) =>
-      product.modelnum?.toLowerCase().includes(query?.toLowerCase())
+      product.parts?.toLowerCase().includes(query?.toLowerCase()) ||
+      product.modelnum?.toLowerCase().includes(query?.toLowerCase()) ||
+      product.brand?.toLowerCase().includes(query?.toLowerCase()) ||
+      product.subCategory?.toLowerCase().includes(query?.toLowerCase()) 
+ 
     );
     console.log("cateogory"+Category);
     console.log("query"+query);
@@ -67,8 +73,13 @@ function ProductPage() {
 
 
   const handleProductClick = (product) => {
-    alert(product.target.value)
-    setProducts(product.target);
+    alert(Object.keys(product));
+    setSelectedProductDetail(Object.keys(product));
+    // setProducts(product);
+  };
+
+  const handleExit = () => {
+    setSelectedProductDetail(null);
   };
 
   return (
@@ -110,22 +121,32 @@ function ProductPage() {
         </div>
 
         <div className="right-container">
-
+      <ProductList products={products} />
+ 
+            {/* <ProductInfo className="ProductInfo" 
+            product={selectedProductDetail}
+            onClick={handleExit}
+            />   
+    
           {filteredProducts?.map((selectedProduct) => (
+
+
           <ul className="productListDetails"  key={selectedProduct.id} 
-            onClick={handleProductClick}
-          > 
+            onClick={() =>  handleProductClick(selectedProduct)}    
+            style={{ cursor: "pointer" }}
+         > 
             <li>{selectedProduct.image}</li>
             <li>{selectedProduct.brand} {selectedProduct.subCategory}</li>
             <li>{selectedProduct.modelnum}</li>
-  
-          </ul>
-        ))}
           
-          {/* <ProductList className="productList" 
-            products={products} 
-            /> */}
+          </ul> */}
 
+            
+       
+          
+          {/* ))} */}
+         
+      
         </div>
       </div>
     </div>

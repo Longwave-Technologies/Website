@@ -4,6 +4,7 @@ import CopierInfo from '../../assets/images/products/copierInfo.json';
 function ProductInfo({ selectedItem }) {
   const [selectedProduct, setSelectedProduct] = useState(selectedItem);
 
+
   const handleExit = () => {
     setSelectedProduct(null);
   };
@@ -11,11 +12,12 @@ function ProductInfo({ selectedItem }) {
   return (
     <div className='content'>
       <h2>Product Details</h2>
-      {/* <ul>
+      <ul>
         <li className='image'>  
-            {selectedProduct.image}
+        
+            {selectedProduct}
         </li>
-        <li className='parts'>  
+        {/* <li className='parts'>  
             {selectedProduct.parts}
         </li>
         <li className='brand'>  
@@ -31,9 +33,9 @@ function ProductInfo({ selectedItem }) {
             {selectedProduct.color}
             {selectedProduct.ppm}
             {selectedProduct.specifications}
-        </li>
+        </li> */}
       </ul>
-      <p>Description: {selectedProduct.description}</p> */}
+      {/* <p>Description: {selectedProduct.description}</p> */}
       <button onClick={handleExit}>Back</button>
     </div>
   );
