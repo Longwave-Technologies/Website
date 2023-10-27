@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ProductInfo from './ProductInfo';
 import CopierInfo from '../../assets/images/products/copierInfo.json';
 import Category from '../../assets/images/products/productCategories.json';
 
@@ -39,16 +38,16 @@ const ProductList = ({ products }) => {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <input
           type="text"
           placeholder="Search products"
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
         />
-        <button onClick={() => handleFilter("Category 1")}>Filter Category 1</button>
-        <button onClick={() => handleFilter("Category 2")}>Filter Category 2</button>
-      </div>
+        <button onClick={() => handleFilter("brand")}>Filter brand</button>
+        <button onClick={() => handleFilter("color")}>Filter  color</button>
+      </div> */}
 
       {selectedProduct ? (
         <div>
@@ -62,7 +61,7 @@ const ProductList = ({ products }) => {
             <ul>     
                <li> {
               (Object.entries(selectedProduct[Object.keys(selectedProduct)].specifications).map(([key,value]) => (
-              <li key={key}> {key}: {value}
+              <li key={key.id}> {key}: {value}
               </li>
               )))
             }
@@ -72,7 +71,7 @@ const ProductList = ({ products }) => {
             <ul>     
                <li> {
               (Object.entries(selectedProduct[Object.keys(selectedProduct)].toners).map(([key,value]) => (
-              <li key={key}> {key}: {value}
+              <li key={key.id}> {key}: {value}
               </li>
               )))
             }
@@ -89,9 +88,9 @@ const ProductList = ({ products }) => {
               onClick={() => handleSelectProduct({product})}            
               style={{ cursor: "pointer" }}
             > 
-              <li key={product.id}>{product.image}</li>
-              <li key={product.id}>{product.brand} {product.subCategory}</li>
-              <li key={product.id}>{product.modelnum}</li>
+              <li >{product.image}</li>
+              <li >{product.brand} {product.subCategory}</li>
+              <li >{product.modelnum}</li>
             </ul>
           ))}
         </div>

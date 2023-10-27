@@ -2,17 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import "../../styles/styles.css";
 import "./ProductPage.css";
 import Fade from "react-reveal/Fade";
-import ProductInfo from './ProductInfo';
 import ProductList from './ProductList';
 import Category from '../../assets/images/products/productCategories.json';
 import CopierInfo from '../../assets/images/products/copierInfo.json';
+import { filter } from "lodash"; //checkboxes
 
 function ProductPage() {
   const [products, setProducts] = useState(CopierInfo);
-  const [filteredProducts, setFilteredProducts] = useState(CopierInfo);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filters, setFilters] = useState(Category); // You can define filter options here
   const [selectedProductDetail, setSelectedProductDetail] = useState(null);
+  const [filters, setFilters] = useState([]); // You can define filter options here
+  const [filteredProducts, setFilteredProducts] = useState(CopierInfo); //Search
 
   // useEffect(() => {
   //   // Simulate fetching product data from an API
@@ -31,56 +31,53 @@ function ProductPage() {
   //   fetchProducts();
   // }, []);
 
-  const handleFilterChange = (filterName, value) => {
+  const handleFilterChange = (filterCategory, value) => {
     // Update filter values
-    const updatedFilters = { ...filters, [filterName]: value };
+    const updatedFilters = filters?.map((key, i) => {
+      //if key, find value --> if value, filter it out. else add value
+            //if !key, add key and value
+
+      if (key === filterCategory){
+        // {key:[...filters.key,value]}
+        // ({filterCategory:[value]})
+        // {filters.filter((key) => {})}
+      }
+     else {
+      return [ ...filters, {filterCategory, value}];   
+     }
+    });
+    console.log("filters array: " ,filters, "size: ", filters.length);
+
     setFilters(updatedFilters);
 
     // Apply filters to products
     const filtered = products.filter((product) => {
       // Implement your filtering logic here based on filter values
       return (
-        (!updatedFilters.category || product.category === updatedFilters.category) &&
-        (!updatedFilters.price || product.price <= updatedFilters.price)
+        (!updatedFilters.filterCategory || product.filterCategory === updatedFilters.filterCategory) 
+        // && (!updatedFilters.color || product.color === updatedFilters.color)
       );
     });
-
     setFilteredProducts(filtered);
+    // console.log("filters" ,filters, "size ", filters.length);
+    // console.log("filteredProducts" , filteredProducts, "size ", filteredProducts.length);
   };
 
   const handleSearch = (query) => {
     setSearchQuery(query);
+
     const filtered = CopierInfo.filter((product) =>
       product.parts?.toLowerCase().includes(query?.toLowerCase()) ||
       product.modelnum?.toLowerCase().includes(query?.toLowerCase()) ||
       product.brand?.toLowerCase().includes(query?.toLowerCase()) ||
       product.subCategory?.toLowerCase().includes(query?.toLowerCase()) 
- 
     );
-    console.log("cateogory"+Category);
-    console.log("query"+query);
-    console.log("filtered"+filtered.modelnum);
-    console.log("setProducts"+setProducts(filtered));
     return setFilteredProducts(filtered);
   };
-
-
-
 
   const uppercaseFirst= (word) => {
     return word[0].toUpperCase() + word.slice(1);
   }
-
-
-  const handleProductClick = (product) => {
-    alert(Object.keys(product));
-    setSelectedProductDetail(Object.keys(product));
-    // setProducts(product);
-  };
-
-  const handleExit = () => {
-    setSelectedProductDetail(null);
-  };
 
   return (
     <div className="content">
@@ -95,58 +92,31 @@ function ProductPage() {
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value) }
             />
-            {/* <button type="submit">Search</button> */}
           </div>
 
           {/* <div className="productFilter">
-                {filters?.map((obj, index) => (
-                  <ul className="filterSubheading">{uppercaseFirst(Object.keys(obj))}
-                  {obj[Object.keys(obj)].map((item,i)=>(
-                    <li key={i}>
-                    <label>
-                      <input type="checkbox" 
-                        value={filteredProducts}
-                      />
-                        <span>{uppercaseFirst(item)}
-                        </span>
-                      </label>
-                    </li>
-                  ))}
-                  </ul>
-                )) }
-            <button className="filterSearch"
-              // filteredProducts={handleFilterChange()}
-            >Search</button>
+            {Category?.map((obj, index) => (
+              <ul className="filterSubheading" key={obj.id}>{uppercaseFirst(Object.keys(obj))}
+              {obj[Object.keys(obj)].map((item,i)=>(
+                <li key={item}>
+                <label>
+                  <input type="checkbox" key={item.id} 
+                    value={item}
+                    onChange={() => handleFilterChange(Object.keys(obj).toString(),item)}
+                  />
+                    <span>{uppercaseFirst(item)}
+                    </span>
+                  </label>
+                </li>
+              ))}
+              </ul>
+            )) }
+            <button type="submit">Clear filters</button>
           </div> */}
         </div>
 
         <div className="right-container">
-      <ProductList products={products} />
- 
-            {/* <ProductInfo className="ProductInfo" 
-            product={selectedProductDetail}
-            onClick={handleExit}
-            />   
-    
-          {filteredProducts?.map((selectedProduct) => (
-
-
-          <ul className="productListDetails"  key={selectedProduct.id} 
-            onClick={() =>  handleProductClick(selectedProduct)}    
-            style={{ cursor: "pointer" }}
-         > 
-            <li>{selectedProduct.image}</li>
-            <li>{selectedProduct.brand} {selectedProduct.subCategory}</li>
-            <li>{selectedProduct.modelnum}</li>
-          
-          </ul> */}
-
-            
-       
-          
-          {/* ))} */}
-         
-      
+          <ProductList products={filteredProducts}  />         
         </div>
       </div>
     </div>

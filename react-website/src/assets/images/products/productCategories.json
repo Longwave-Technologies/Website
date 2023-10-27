@@ -3,7 +3,7 @@
         "parts": ["copier","toner"]
     },
     {
-        "brands": ["canon", "konica", "kyocera", "sharp", "toshiba"]
+        "brand": ["canon", "konica", "kyocera", "sharp", "toshiba"]
     },
     {
         "color": ["bw", "color"]
