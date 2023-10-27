@@ -64,9 +64,9 @@
 
 .productList {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-direction: row; /* Stack items vertically */
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   list-style: none; /* Remove default list styles */
   padding: 0.5rem;
   margin: 0.5rem;

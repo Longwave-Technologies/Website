@@ -3,14 +3,14 @@
         "parts": ["copier","toner"]
     },
     {
-        "brand": ["canon", "konica", "kyocera", "sharp", "toshiba"]
+        "brands": ["canon", "konica", "kyocera", "sharp", "toshiba"]
     },
     {
         "color": ["bw", "color"]
     },
     {
-        "ppm": ["30", "35", "40", "45" , "50", "55", "60", "65", "70", "75", "80", "85", "90"]
+        "ppm": ["up to 20", "21 to 35", "36 to 49", "Greater than 50"]
     }
 
 ]
-  
+    

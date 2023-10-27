@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import CopierInfo from '../../assets/images/products/copierInfo.json';
 import Category from '../../assets/images/products/productCategories.json';
 
+const images = require.context('../../assets/images/products', true);
+
 const ProductList = ({ products }) => {
   const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
@@ -38,22 +40,13 @@ const ProductList = ({ products }) => {
 
   return (
     <div>
-      {/* <div>
-        <input
-          type="text"
-          placeholder="Search products"
-          value={search}
-          onChange={(e) => handleSearch(e.target.value)}
-        />
-        <button onClick={() => handleFilter("brand")}>Filter brand</button>
-        <button onClick={() => handleFilter("color")}>Filter  color</button>
-      </div> */}
-
       {selectedProduct ? (
         <div>
           <h2>Product Details</h2>
-          <ul className='productListDetails'>
-            <li>{selectedProduct[Object.keys(selectedProduct)].image}</li>
+          {/* <ul className='productListDetails'>
+            <li>
+            <img src={images(selectedProduct[Object.keys(selectedProduct)].image_path)} alt=""/>
+            </li>
             <li>{selectedProduct[Object.keys(selectedProduct)].brand} {selectedProduct[Object.keys(selectedProduct)].subCategory}</li>
             <li>{selectedProduct[Object.keys(selectedProduct)].modelnum}</li>
             <li>{selectedProduct[Object.keys(selectedProduct)].ppm}</li>
@@ -77,18 +70,20 @@ const ProductList = ({ products }) => {
             }
             </li>
             </ul>
-          </ul>
+          </ul> */}
           <p>Description: {selectedProduct[Object.keys(selectedProduct)].description}</p>
           <button onClick={handleExit}>Return to List</button>
         </div> 
       ) : (
         <div>
           {filteredProducts?.map((product) => ( 
-            <ul className="productListDetails"  key={product.id} 
+            <ul className="productList"  key={product.id} 
               onClick={() => handleSelectProduct({product})}            
               style={{ cursor: "pointer" }}
             > 
-              <li >{product.image}</li>
+              <li className='productList'>
+                <img src={images(product.image_path)} alt="images"/>
+              </li>
               <li >{product.brand} {product.subCategory}</li>
               <li >{product.modelnum}</li>
             </ul>
