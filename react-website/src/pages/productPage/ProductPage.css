@@ -64,21 +64,24 @@
 
 .productList {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-direction: row; /* Stack items vertically */
   flex-wrap: wrap;
   list-style: none; /* Remove default list styles */
   padding: 0.5rem;
   margin: 0.5rem;
-  /* Style your product list as needed */
+  grid-template-rows: repeat(auto-fit, minmax(10em, 15em));
+
 }
 
 .productListDetails{
   display: flex;
   /* justify-content: space-between; */
   flex-direction: column;
-  flex-wrap: nowrap;
-  list-style: none; /* Remove default list styles */ 
+  flex-wrap: wrap;
+  list-style: none; /* Remove default list styles */
+  width: 180;
+   height: 200;
 }
 
 ul {

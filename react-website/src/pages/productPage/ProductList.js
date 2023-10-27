@@ -75,13 +75,13 @@ const ProductList = ({ products }) => {
           <button onClick={handleExit}>Return to List</button>
         </div> 
       ) : (
-        <div>
+        <div className='productList'>
           {filteredProducts?.map((product) => ( 
-            <ul className="productList"  key={product.id} 
+            <ul className="productListDetails"  key={product.id} 
               onClick={() => handleSelectProduct({product})}            
               style={{ cursor: "pointer" }}
             > 
-              <li className='productList'>
+              <li >
                 <img src={images(product.image_path)} alt="images"/>
               </li>
               <li >{product.brand} {product.subCategory}</li>
