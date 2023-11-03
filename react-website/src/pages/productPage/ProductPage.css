@@ -65,13 +65,15 @@
 .productList {
   display: flex;
   /* justify-content: space-between; */
-  flex-direction: row; /* Stack items vertically */
+  /* flex-direction: row; */
   flex-wrap: wrap;
   list-style: none; /* Remove default list styles */
-  padding: 0.5rem;
-  margin: 0.5rem;
-  grid-template-rows: repeat(auto-fit, minmax(10em, 15em));
-
+  padding: 0.2rem;
+  margin: 0.2rem;
+  align-content: flex-start; /* Start from the top of the container */
+  gap: 10px; /* Add some spacing between images (adjust as needed) */
+  padding: 10px; /* Add padding around the container */
+  /* background-color: #f0f0f0; */
 }
 
 .productListDetails{
@@ -80,8 +82,19 @@
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none; /* Remove default list styles */
-  width: 180;
-   height: 200;
+  align-content: center; /* Start from the top of the container */
+  padding: 10px; /* Add padding around the container */
+}
+
+.productListDetails img {
+  width: 200px; /* Set the width of each image */
+  height: 200px; /* Set the height of each image */
+  object-fit: cover; /* Maintain the image aspect ratio and crop if needed */
+  margin: 5px; /* Add some margin between images */
+  max-width: 100%; /* Prevent images from exceeding their container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add border radius for rounded corners (optional) */
+
 }
 
 ul {
