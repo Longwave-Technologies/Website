@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import CopierInfo from '../../assets/images/products/copierInfo.json';
 import Category from '../../assets/images/products/productCategories.json';
+import './ProductList.css';
 
 const images = require.context('../../assets/images/products', true);
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, updatePopup }) => {
   const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -18,11 +19,13 @@ const ProductList = ({ products }) => {
   };
 
   const handleSelectProduct = (product) => {
+    updatePopup(true);
     setSelectedProduct(product);
     console.log('object:',typeof(product));
   };
 
   const handleExit = () => {
+    updatePopup(false);
     setSelectedProduct(null);
   };
 
@@ -41,38 +44,32 @@ const ProductList = ({ products }) => {
   return (
     <div>
       {selectedProduct ? (
-        <div>
-          <h2>Product Details</h2>
-          {/* <ul className='productListDetails'>
-            <li>
-            <img src={images(selectedProduct[Object.keys(selectedProduct)].image_path)} alt=""/>
-            </li>
-            <li>{selectedProduct[Object.keys(selectedProduct)].brand} {selectedProduct[Object.keys(selectedProduct)].subCategory}</li>
-            <li>{selectedProduct[Object.keys(selectedProduct)].modelnum}</li>
-            <li>{selectedProduct[Object.keys(selectedProduct)].ppm}</li>
-            <li>specifications:</li>
-            <ul>     
-               <li> {
-              (Object.entries(selectedProduct[Object.keys(selectedProduct)].specifications).map(([key,value]) => (
-              <li key={key.id}> {key}: {value}
+        <div className='product-container-child'>
+          <div className='left-container-child'>
+            <img src={images(selectedProduct[Object.keys(selectedProduct)].image_path)} alt="pic"/>
+          </div>
+          <div className='right-container-child'>
+            <h1 className='specs'>{selectedProduct[Object.keys(selectedProduct)].brand} {selectedProduct[Object.keys(selectedProduct)].subCategory}  {selectedProduct[Object.keys(selectedProduct)].modelnum}</h1>
+            <ul className='specs'>  
+              <li>{selectedProduct[Object.keys(selectedProduct)].ppm}</li>
+              <li> {
+                (Object.entries(selectedProduct[Object.keys(selectedProduct)].function).map(([key,value]) => (
+                <li key={key.id}> {value[0].toUpperCase() + value.slice(1)} </li>
+
+                )))
+               }
               </li>
-              )))
-            }
-            </li>
-            </ul>
-            <li>Toners:</li>
-            <ul>     
-               <li> {
+              <li> {
               (Object.entries(selectedProduct[Object.keys(selectedProduct)].toners).map(([key,value]) => (
-              <li key={key.id}> {key}: {value}
-              </li>
+              <li key={key.id}> {key[0].toUpperCase() + key.slice(1)}: {value.toUpperCase()} </li>
               )))
-            }
-            </li>
-            </ul>
-          </ul> */}
-          <p>Description: {selectedProduct[Object.keys(selectedProduct)].description}</p>
-          <button onClick={handleExit}>Return to List</button>
+              }
+              </li>
+            </ul>            
+             <p className='specs'>{selectedProduct[Object.keys(selectedProduct)].description}</p>
+            <button onClick={handleExit}>Return to List</button>
+          </div>
+
         </div> 
       ) : (
         <div className='productList'>

@@ -13,6 +13,13 @@ function ProductPage() {
   const [selectedProductDetail, setSelectedProductDetail] = useState(null);
   const [filters, setFilters] = useState([]); // You can define filter options here
   const [filteredProducts, setFilteredProducts] = useState(CopierInfo); //Search
+ 
+  const [superParentUpdatePopup, setSuperParentUpdatePopup] = useState(false);
+
+  // Callback function to update the class name
+  const updateSuperParentUpdatePopup = (newPopup) => {
+    setSuperParentUpdatePopup(newPopup);
+  };
 
   // useEffect(() => {
   //   // Simulate fetching product data from an API
@@ -81,9 +88,10 @@ function ProductPage() {
 
   return (
     <div className="content">
-      <div className="product-container">
-        <div className="left-container">
-          <div className="productSearch">
+      <div className={"product-container-parent"}>
+       {!superParentUpdatePopup ? ( 
+        <div className={"left-container-parent"}>
+          <div className={"productSearch-parent"}>
             <input
               type="search"
               id="mySearch"
@@ -114,11 +122,14 @@ function ProductPage() {
             <button type="submit">Clear filters</button>
           </div> */}
         </div>
-
-        <div className="right-container">
-          <ProductList products={filteredProducts}  />         
+       ):("")
+        }
+        <div className={"right-container-parent"}>
+          <ProductList products={filteredProducts} updatePopup={updateSuperParentUpdatePopup} />         
         </div>
+          
       </div>
+      
     </div>
   );
 }

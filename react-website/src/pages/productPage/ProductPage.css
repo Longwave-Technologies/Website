@@ -1,7 +1,7 @@
 .content {
   margin-top: 100px;
 }
-.product-container {
+.product-container-parent {
   display: flex;
   flex-direction: row;
   width: auto;
@@ -9,7 +9,7 @@
   margin: auto;
   gap: 1rem; /* Spacing between items (optional) */
 }
-.left-container{
+.left-container-parent{
   display: flex;
   flex-direction: column;
   flex: 1 0 20%;
@@ -17,7 +17,7 @@
   height: auto;
   gap: 1rem; /* Spacing between items (optional) */
 }
-.right-container{
+.right-container-parent{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -26,7 +26,7 @@
   height: auto;
   gap: 1rem; /* Spacing between items (optional) */
 }
-.productSearch {
+.productSearch-parent {
   display: flex;
   flex-direction: row; /* Stack items vertically */
   gap: 1rem; /* Spacing between items (optional) */
@@ -87,12 +87,10 @@
 }
 
 .productListDetails img {
-  width: 200px; /* Set the width of each image */
-  height: 200px; /* Set the height of each image */
+  width: 220px; /* Set the width of each image */
+  height: 220px; /* Set the height of each image */
   object-fit: cover; /* Maintain the image aspect ratio and crop if needed */
   margin: 5px; /* Add some margin between images */
-  max-width: 100%; /* Prevent images from exceeding their container */
-  height: auto; /* Maintain aspect ratio */
   border-radius: 5px; /* Add border radius for rounded corners (optional) */
 
 }

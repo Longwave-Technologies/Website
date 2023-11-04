@@ -1,0 +1,43 @@
+.product-container-child {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    gap: 1rem; /* Spacing between items (optional) */
+    padding: 20px; /* Add padding around the container */
+    margin: 1rem;
+}
+  
+  .left-container-child {
+    display: flex;
+    flex-direction: column;
+    width: 500px; /* Set the width of each image */
+    height: 500px; 
+    gap: 1rem; /* Spacing between items (optional) */
+    padding: 10px; /* Add padding around the container */
+    margin: 0.5rem;
+  }
+
+  .right-container-child{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Add padding around the container */
+    margin: 1rem;
+}
+
+.specs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-shrink: auto; */
+    width: 90%;
+    margin: 1rem;
+    text-align: left;
+    list-style-type: disc;
+
+}
