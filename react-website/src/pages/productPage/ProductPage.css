@@ -49,6 +49,11 @@ span {
   list-style: none; /* Remove default list styles */
   align-content: center; /* Start from the top of the container */
 }
+.productListDetails:hover {
+  background-color: rgba(1, 77, 153, 0.1);
+  transition-duration: 0.5s;
+  transform: scale(1.07);
+}
 
 .productListDetails img {
   max-width: 250px; /* Set the width of each image */
