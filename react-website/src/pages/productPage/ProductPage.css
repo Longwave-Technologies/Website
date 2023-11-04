@@ -2,14 +2,9 @@
   margin-top: 100px;
 }
 .product-container-parent {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: auto;
-  margin: auto;
-  gap: 1rem; /* Spacing between items (optional) */
+  display: block;
 }
-.left-container-parent{
+.left-container-parent {
   display: flex;
   flex-direction: column;
   flex: 1 0 20%;
@@ -17,84 +12,45 @@
   height: auto;
   gap: 1rem; /* Spacing between items (optional) */
 }
-.right-container-parent{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex: 1 0 80%;
-  width: auto;
-  height: auto;
-  gap: 1rem; /* Spacing between items (optional) */
-}
 .productSearch-parent {
-  display: flex;
-  flex-direction: row; /* Stack items vertically */
-  gap: 1rem; /* Spacing between items (optional) */
-  margin: 2rem;
-  align-items: center;
-
+  margin-top: 15px;
 }
-  label {
-    display: flex;
-    margin: 0.4rem 0.6;
-    display: block;
-    font:
-      1rem 'Fira Sans',
-      sans-serif;
-    align-items: center;
 
-  }
-  span{
-    align-items: center;
-  }
-  
-  input,
-  label {
-    margin: 0.4rem 0.6;
-    align-items: center;
+.productSearch-parent input {
+  margin: 1rem;
+  border: none;
+  padding: 0.5rem;
+  width: 20rem;
+}
 
-  }
-
-.productFilter {
-  display: flex;
-  flex-direction: column; /* Stack checkboxes vertically */
-  gap: 0.5rem; /* Spacing between checkboxes (optional) */
-
+label {
+  display: block;
+}
+span {
+  align-items: center;
 }
 
 .productList {
   display: flex;
-  /* justify-content: space-between; */
-  /* flex-direction: row; */
+  margin: auto 5rem auto 5rem;
   flex-wrap: wrap;
   list-style: none; /* Remove default list styles */
-  padding: 0.2rem;
-  margin: 0.2rem;
-  align-content: flex-start; /* Start from the top of the container */
-  gap: 10px; /* Add some spacing between images (adjust as needed) */
-  padding: 10px; /* Add padding around the container */
-  /* background-color: #f0f0f0; */
+  gap: 0.8rem; /* Add some spacing between images (adjust as needed) */
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
 }
 
-.productListDetails{
+.productListDetails {
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
-  flex-wrap: wrap;
   list-style: none; /* Remove default list styles */
   align-content: center; /* Start from the top of the container */
-  padding: 10px; /* Add padding around the container */
 }
 
 .productListDetails img {
-  width: 220px; /* Set the width of each image */
-  height: 220px; /* Set the height of each image */
-  object-fit: cover; /* Maintain the image aspect ratio and crop if needed */
-  margin: 5px; /* Add some margin between images */
-  border-radius: 5px; /* Add border radius for rounded corners (optional) */
-
-}
-
-ul {
-  list-style-type: none;
+  max-width: 250px; /* Set the width of each image */
+  max-height: 250px; /* Set the height of each image */
+  object-fit: fill; /* Maintain the image aspect ratio and crop if needed */
 }
