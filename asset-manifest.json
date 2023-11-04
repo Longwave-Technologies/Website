@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8af19476.css",
+    "main.css": "/static/css/main.0669f079.css",
     "main.js": "/static/js/main.8d3e60e3.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/mx_m4051_full_beauty.png": "/static/media/mx_m4051_full_beauty.63c0a94f29db63562ee4.png",
@@ -48,12 +48,12 @@
     "static/media/kyocera.png": "/static/media/kyocera.5e2c2741fa8199d172ff.png",
     "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
-    "main.8af19476.css.map": "/static/css/main.8af19476.css.map",
+    "main.0669f079.css.map": "/static/css/main.0669f079.css.map",
     "main.8d3e60e3.js.map": "/static/js/main.8d3e60e3.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8af19476.css",
+    "static/css/main.0669f079.css",
     "static/js/main.8d3e60e3.js"
   ]
 }
