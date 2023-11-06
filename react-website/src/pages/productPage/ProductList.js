@@ -84,7 +84,7 @@ const ProductList = ({ products, updatePopup }) => {
             <p className="specs">
               {selectedProduct[Object.keys(selectedProduct)].description}
             </p>
-            <div className = 'buttonDiv'>
+            <div className="buttonDiv">
               <button onClick={handleExit}>Return to List</button>
             </div>
           </div>

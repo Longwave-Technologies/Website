@@ -89,21 +89,22 @@ function ProductPage() {
 
   return (
     <div className="content">
-      <div className={"product-container-parent"}>
-        {!superParentUpdatePopup ? (
-          <div className={"left-container-parent"}>
-            <div className={"productSearch-parent"}>
-              <input
-                type="search"
-                id="mySearch"
-                name="q"
-                placeholder="Search for products"
-                value={searchQuery}
-                onChange={(e) => handleSearch(e.target.value)}
-              />
-            </div>
+      <Fade>
+        <div className={"product-container-parent"}>
+          {!superParentUpdatePopup ? (
+            <div className={"left-container-parent"}>
+              <div className={"productSearch-parent"}>
+                <input
+                  type="search"
+                  id="mySearch"
+                  name="q"
+                  placeholder="Search for products"
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
+                />
+              </div>
 
-            {/* <div className="productFilter">
+              {/* <div className="productFilter">
             {Category?.map((obj, index) => (
               <ul className="filterSubheading" key={obj.id}>{uppercaseFirst(Object.keys(obj))}
               {obj[Object.keys(obj)].map((item,i)=>(
@@ -122,15 +123,16 @@ function ProductPage() {
             )) }
             <button type="submit">Clear filters</button>
           </div> */}
-          </div>
-        ) : (
-          ""
-        )}
-        <ProductList
-          products={filteredProducts}
-          updatePopup={updateSuperParentUpdatePopup}
-        />
-      </div>
+            </div>
+          ) : (
+            ""
+          )}
+          <ProductList
+            products={filteredProducts}
+            updatePopup={updateSuperParentUpdatePopup}
+          />
+        </div>
+      </Fade>
     </div>
   );
 }
