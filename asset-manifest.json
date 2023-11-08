@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b7e77f56.css",
-    "main.js": "/static/js/main.b3d4be13.js",
+    "main.js": "/static/js/main.5082392d.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/mx_m4051_full_beauty.png": "/static/media/mx_m4051_full_beauty.63c0a94f29db63562ee4.png",
     "static/media/mx_m4051_full_front.png": "/static/media/mx_m4051_full_front.53c59978f0cd9f931e3f.png",
@@ -43,11 +43,11 @@
     "static/media/ecosys_m3655idn.png": "/static/media/ecosys_m3655idn.7260033ac66ce399d769.png",
     "static/media/copier.png": "/static/media/copier.bcc447c5ae2deb8d1af8.png",
     "static/media/BP-50C65.png": "/static/media/BP-50C65.a7ab2b8d40e1b9fc5542.png",
-    "static/media/imagerunner_advance_c5500i_iii.png": "/static/media/imagerunner_advance_c5500i_iii.8dee40fc4204889c9fd2.png",
     "static/media/imagerunner_advance_6255.png": "/static/media/imagerunner_advance_6255.f334942c74a6545a379b.png",
     "static/media/MX-B467F.png": "/static/media/MX-B467F.3916a5a48167ec40e459.png",
     "static/media/MX-M6050.png": "/static/media/MX-M6050.722a35d05f9a59fb4f97.png",
     "static/media/MX-C304WH.png": "/static/media/MX-C304WH.3ab1da1caf3e0a4a9f03.png",
+    "static/media/imagerunner_advance_c5500i_iii.png": "/static/media/imagerunner_advance_c5500i_iii.1f8c31dc03e2326f2c3b.png",
     "static/media/bizhub_c300i.png": "/static/media/bizhub_c300i.06e1abf19c53d03bd13f.png",
     "static/media/bizhub_c250i.png": "/static/media/bizhub_c250i.6e365ef123e61d6a8c4d.png",
     "static/media/canon.png": "/static/media/canon.71422765daafa3cc4dad.png",
@@ -69,11 +69,11 @@
     "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
     "main.b7e77f56.css.map": "/static/css/main.b7e77f56.css.map",
-    "main.b3d4be13.js.map": "/static/js/main.b3d4be13.js.map",
+    "main.5082392d.js.map": "/static/js/main.5082392d.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7e77f56.css",
-    "static/js/main.b3d4be13.js"
+    "static/js/main.5082392d.js"
   ]
 }
