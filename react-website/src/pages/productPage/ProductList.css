@@ -5,9 +5,9 @@
   gap: 1rem; /* Spacing between items (optional) */
   margin: 3rem;
   justify-content: space-evenly;
-  justify-items: center;
+  justify-items: left;
   align-content: space-evenly;
-  align-items: center;
+  align-items: left;
 }
 
 .left-container-child {

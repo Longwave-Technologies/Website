@@ -34,13 +34,13 @@ span {
 .productList {
   display: flex;
   margin: auto 5rem auto 5rem;
+  padding: auto;
   flex-wrap: wrap;
-  list-style: none; /* Remove default list styles */
   gap: 0.8rem; /* Add some spacing between images (adjust as needed) */
   justify-content: space-evenly;
   justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
+  align-content: space-between;
+  align-items: left;
 }
 
 .productListDetails {
@@ -56,7 +56,7 @@ span {
 }
 
 .productListDetails img {
-  max-width: 250px; /* Set the width of each image */
+  width: 250px; /* Set the width of each image */
   max-height: 250px; /* Set the height of each image */
   object-fit: fill; /* Maintain the image aspect ratio and crop if needed */
 }
