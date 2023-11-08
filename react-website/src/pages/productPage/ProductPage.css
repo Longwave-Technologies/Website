@@ -14,8 +14,30 @@
 }
 .productSearch-parent {
   margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+.cameraSubmit{
+  display: flex;
+  background: transparent;
+  border-radius: 5px;
+  width: 4rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.cameraSubmit:hover{
+  background: rgb(159, 200, 247);
 
+}
+.camera{
+  display: flex;
+  width: auto;
+  height: 2rem;
+
+}
 .productSearch-parent input {
   margin: 1rem;
   border: none;

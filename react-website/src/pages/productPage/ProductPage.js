@@ -6,6 +6,7 @@ import ProductList from "./ProductList";
 import Category from "../../assets/images/products/productCategories.json";
 import CopierInfo from "../../assets/images/products/copierInfo.json";
 import { filter } from "lodash"; //checkboxes
+import { default as camera } from "../../assets/images/camera.png";
 
 function ProductPage() {
   const [products, setProducts] = useState(CopierInfo);
@@ -94,6 +95,10 @@ function ProductPage() {
           {!superParentUpdatePopup ? (
             <div className={"left-container-parent"}>
               <div className={"productSearch-parent"}>
+              <button type="submit" className="cameraSubmit">
+                <img src={camera} alt="camera"className="camera"/>
+              </button>
+                       
                 <input
                   type="search"
                   id="mySearch"

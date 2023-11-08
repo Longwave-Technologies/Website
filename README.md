@@ -11,7 +11,7 @@ Save locally and pulling from remote:
   You are working on some unfinished feature and you need to save this (draft):
     ``` git stash
               or 
-              git stash save "feature X"
+      `git stash save "feature X"`
     ```
   Now you pull the code:
     ```git pull origin master```
@@ -109,75 +109,6 @@ Here's an outline of the architecture and steps:
   By following these best modular practices and maintaining a clear directory structure, you'll make it easier to collaborate with team members, scale your project, and maintain code quality in your React frontend application.
 
 **2. Frontend Development (React and Bootstrap):**
-
-- Create a React frontend for your website. You can use create-react-app to bootstrap your project.
-- Design and implement the website using Bootstrap for responsive design.
-- Include a contact form component in your React application. You can use a form library like Formik or react-hook-form for handling the contact form.
-
-```jsx
-// src/components/ContactForm.js
-import React from "react";
-import { useFormik } from "formik";
-
-function ContactForm() {
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-    onSubmit: (values) => {
-      // Send form data to the backend API
-      fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          // Handle the response, show success or error messages to the user
-        });
-    },
-  });
-  return (
-    <form onSubmit={formik.handleSubmit}>
-      <label>
-        Name:
-        <input
-          type="text"
-          name="name"
-          onChange={formik.handleChange}
-          value={formik.values.name}
-        />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-        />
-      </label>
-      <br />
-      <label>
-        Message:
-        <textarea
-          name="message"
-          onChange={formik.handleChange}
-          value={formik.values.message}
-        />
-      </label>
-      <br />
-      <button type="submit">Submit</button>
-    </form>
-  );
-}
-export default ContactForm;
-```
 
 **2.1. Dockerize React Frontend:**
 Create a Dockerfile for your React frontend.
@@ -363,49 +294,6 @@ jobs:
         docker rm frontend-container
 ```
 
-**7. Continuous Integration/Continuous Deployment (CI/CD):**
-
-- Set up a CI/CD pipeline using GitHub Actions or another CI/CD tool of your choice.
-- Configure the pipeline to automatically build, test, and deploy your Docker containers whenever you push changes to your GitHub repository.
-- Set up environment variables for secrets like database credentials.
-- With this workflow in place, every time you push changes to your GitHub repository's main branch, GitHub Actions will automatically build and deploy your Golang backend and React frontend containers.
-  Ensure you have proper access control and security measures in place for your hosting platforms.
-
-**8. Security and Secrets Management:**
-
-- Use environment variables or a secrets management tool to store sensitive information such as database credentials securely.
-- Implement security best practices, including input validation, encryption (SSL/TLS), and protecting against common web vulnerabilities (e.g., SQL injection, XSS).
-- Ensure proper user authentication and authorization to protect sensitive data and functionality.
-- Implement security measures such as:
-
-  - Authentication and authorization for user access.
-  - Use HTTPS for secure communication.
-  - Validate and sanitize user inputs to prevent SQL injection and XSS attacks.
-  - Set up a firewall and access control lists (ACLs) for Docker containers.
-  - Securing Docker: To secure Docker containers, you should follow best practices for container security. This includes regularly updating base images, minimizing the attack surface, using appropriate permissions, and more. Security practices might vary based on your deployment environment, so consult security guidelines for Docker in your specific context.
-
-Remember to secure your application further by handling user data responsibly, using HTTPS for communication, and implementing user authentication as needed.
-
-**9. Domain and SSL Certificate:**
-
-- Purchase a domain for your business website and configure DNS settings.
-- Obtain and install an SSL certificate for secure communication.
-
-10. **Deployment and Hosting:**
-
-- Deploy your Docker containers/application to a production environment like hosting provider of your choice (e.g., AWS, Azure, Google Cloud).
-- Configure your hosting environment, including load balancers, firewalls, and scaling options.
-- Ensure proper security configurations for the production environment.
-
-11. **Monitoring, Maintenance, and Logging:**
-
-- Implement monitoring and logging solutions to track the health and performance of your website and detect security incidents. Regularly update your application and its dependencies to patch security vulnerabilities.
-
-12. **Documentation:**
-
-- Provide comprehensive documentation for your project, including setup instructions and explanations of how to use and maintain the website.
-
-Please note that creating such a project is a significant undertaking and would require substantial time and expertise in each technology stack. You can find code examples, tutorials, and open-source projects on GitHub that cover various aspects of this project, which can serve as valuable resources as you work on your own implementation.
 
 # References
 
