@@ -48,7 +48,9 @@ span {
   flex-direction: column;
   list-style: none; /* Remove default list styles */
   align-content: center; /* Start from the top of the container */
+  max-width: 250px;
 }
+
 .productListDetails:hover {
   background-color: rgba(1, 77, 153, 0.1);
   transition-duration: 0.5s;
@@ -58,5 +60,5 @@ span {
 .productListDetails img {
   width: 250px; /* Set the width of each image */
   max-height: 250px; /* Set the height of each image */
-  object-fit: fill; /* Maintain the image aspect ratio and crop if needed */
+  object-fit: scale-down; /* Maintain the image aspect ratio and crop if needed */
 }

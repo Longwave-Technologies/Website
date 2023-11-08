@@ -6,7 +6,7 @@
         "brands": ["canon", "konica", "kyocera", "sharp", "toshiba"]
     },
     {
-        "color": ["bw", "color"]
+        "color": ["monochrome", "color"]
     },
     {
         "ppm": ["up to 20", "21 to 35", "36 to 49", "Greater than 50"]

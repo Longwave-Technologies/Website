@@ -57,7 +57,10 @@ const ProductList = ({ products, updatePopup }) => {
               {selectedProduct[Object.keys(selectedProduct)].modelnum}
             </h1>
             <ul className="specs">
-              <li>{selectedProduct[Object.keys(selectedProduct)].ppm}</li>
+              <li>
+                Page per minute:&nbsp;
+                {selectedProduct[Object.keys(selectedProduct)].ppm}
+              </li>
               <li>
                 {" "}
                 {Object.entries(
