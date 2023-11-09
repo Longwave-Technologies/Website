@@ -10,9 +10,10 @@ import { filter } from "lodash"; //checkboxes
 function ProductPage() {
   const [products, setProducts] = useState(CopierInfo);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductDetail, setSelectedProductDetail] = useState(null);
-  const [filters, setFilters] = useState([]); // You can define filter options here
   const [filteredProducts, setFilteredProducts] = useState(CopierInfo); //Search
+
+  const [filters, setFilters] = useState({}); // You can define filter options here
+  const [selectedProductDetail, setSelectedProductDetail] = useState(null);
 
   const [superParentUpdatePopup, setSuperParentUpdatePopup] = useState(false);
 
@@ -40,19 +41,29 @@ function ProductPage() {
 
   const handleFilterChange = (filterCategory, value) => {
     // Update filter values
-    const updatedFilters = filters?.map((key, i) => {
+    const updatedFilters = filters?.map((key, array) => {
       //if key, find value --> if value, filter it out. else add value
       //if !key, add key and value
+
+      console.log("1. filters map: ", filters, "size: ", filters.length);
 
       if (key === filterCategory) {
         // {key:[...filters.key,value]}
         // ({filterCategory:[value]})
         // {filters.filter((key) => {})}
-      } else {
-        return [...filters, { filterCategory, value }];
-      }
+        console.log("2. filters map: ", filters, "size: ", filters.length);
+        {array.map(categoryValue => {
+            if (categoryValue !== value)
+              return  [...filters.key.array,value]
+        })}
+        
+      } 
+      // : {
+      //   console.log("3. filters map: ", filters, "size: ", filters.length);
+      //   return [...filters, { filterCategory: [value] }];
+      // }
     });
-    console.log("filters array: ", filters, "size: ", filters.length);
+    console.log("4. filters map: ", filters, "size: ", filters.length);
 
     setFilters(updatedFilters);
 
@@ -104,25 +115,27 @@ function ProductPage() {
                 />
               </div>
 
-              {/* <div className="productFilter">
-            {Category?.map((obj, index) => (
-              <ul className="filterSubheading" key={obj.id}>{uppercaseFirst(Object.keys(obj))}
-              {obj[Object.keys(obj)].map((item,i)=>(
-                <li key={item}>
-                <label>
-                  <input type="checkbox" key={item.id} 
-                    value={item}
-                    onChange={() => handleFilterChange(Object.keys(obj).toString(),item)}
-                  />
-                    <span>{uppercaseFirst(item)}
-                    </span>
-                  </label>
-                </li>
-              ))}
-              </ul>
-            )) }
-            <button type="submit">Clear filters</button>
-          </div> */}
+              <div className="productFilter">
+                {Category?.map((obj, index) => (
+                  <ul className="filterSubheading" key={obj.id}>{uppercaseFirst(Object.keys(obj))}
+                  {obj[Object.keys(obj)].map((item,i)=>(
+                    <li key={item}>
+                    <label>
+                      <input type="checkbox" key={item.id} 
+                        value={item}
+                        onChange={() => handleFilterChange(Object.keys(obj).toString(),item)}
+                      />
+                        <span>{uppercaseFirst(item)}
+                        </span>
+                      </label>
+                    </li>
+                  ))}
+                  </ul>
+                )) }
+                <div className="filterSubmit">
+                  <button type="submit"  >Clear all filters</button>
+                </div>
+              </div>
             </div>
           ) : (
             ""
