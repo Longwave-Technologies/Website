@@ -3,6 +3,9 @@ Checkout our website: https://longwave-technologies.github.io
 
 Creating a complete secured business website with Docker, Golang, React, Bootstrap, PostgreSQL, and a contact form with CI/CD on GitHub.
 
+<details>
+<summary>**Important Git commands**</summary>
+
 Deploy and update on the server: `npm run deploy`
 
 Deploy locally: `npm start`
@@ -14,24 +17,27 @@ Save locally and pulling from remote:
       `git stash save "feature X"`
     ```
   Now you pull the code:
-    ```git pull origin master```
+    ```git pull origin main```
   Restore the work you were doing for feature X using below command:
     ``` git stash apply```
 
 Proper git development: https://medium.com/@anjulapaulus_84798/beginners-guide-to-proper-git-workflow-35a2d967734e
   ```
-  git checkout master
+  git checkout main
   git checkout -b develop
   git checkout -b feature/feature-name
   #After the feature development is done
   git checkout develop
   git merge feature/feature-name
-  git checkout master
+  git checkout main
   git merge feature/feature-name
   git branch -d feature/feature-name
   ```
+</details>
+<details>
+<summary>
 Here's an outline of the architecture and steps:
-
+</summary>
 **1. Set Up the Development Environment:**
 
 - Install Docker, Golang, and Node.js on your development machine.
@@ -83,8 +89,10 @@ Here's an outline of the architecture and steps:
   ├── docker-compose.yml
   └── ...
   ```
-
-  Here are some best modular practices to follow for multiple React pages:
+</details>
+<details>
+ <summary> Here are some best modular practices to follow for multiple React pages: 
+ </summary>
 
   1. **Separation of Concerns:** Each component should focus on a specific concern. For example, keep business logic, UI, and styles separate. This makes it easier to maintain and reuse components.
 
@@ -107,9 +115,11 @@ Here's an outline of the architecture and steps:
   10. **Main Entry Point:** The `App.js` file serves as the main entry point of your application. It should handle routing and the overall structure of your app. The `index.js` file is the entry point for rendering your React application.
 
   By following these best modular practices and maintaining a clear directory structure, you'll make it easier to collaborate with team members, scale your project, and maintain code quality in your React frontend application.
-
+</details>
+<details>
+<summary>
 **2. Frontend Development (React and Bootstrap):**
-
+</summary>
 **2.1. Dockerize React Frontend:**
 Create a Dockerfile for your React frontend.
 
@@ -140,9 +150,11 @@ EXPOSE 3000
 # Start the React application
 CMD ["npm", "start"]
 ```
-
+</details>
+<details>
+<summary>
 **3. Backend Development (Golang):**
-
+</summary>
 - Create a Go backend server to handle API requests and interact with the database.
 - Implement secure user authentication and authorization mechanisms.
 - Set up routes and handlers to serve data to the frontend and handle form submissions.
@@ -194,9 +206,11 @@ EXPOSE 8080
 # Run the Go application
 CMD ["./main"]
 ```
-
+</details>
+<details>
+<summary>
 **4. Database (PostgreSQL):**
-
+</summary>
 - Set up a PostgreSQL database to store your website's data securely.
 - Define the database schema and create tables to store information such as user data, contact form submissions, etc.
 
@@ -293,10 +307,11 @@ jobs:
         docker stop frontend-container
         docker rm frontend-container
 ```
-
-
+</details>
+<details>
+<summary>
 # References
-
+</summary>
 - [How to deploy React App to GitHub Pages](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
 - [React-app deploy official doc](https://create-react-app.dev/docs/deployment/#github-pages)
 - [React-app-deploy official github doc](https://github.com/gitname/react-gh-pages)
@@ -304,3 +319,4 @@ jobs:
 - [Import Babel devDependencies error](https://stackoverflow.com/questions/76435306/babel-preset-react-app-is-importing-the-babel-plugin-proposal-private-propert)
 - [Properly name repo to host on Github Pages](https://kinsta.com/blog/github-pages/)
 - [Animated Logo Preloader](https://ihatetomatoes.net/create-css3-spinning-preloader/)
+</details>
