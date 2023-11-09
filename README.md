@@ -3,7 +3,7 @@ Checkout our website: https://longwave-technologies.github.io
 
 Creating a complete secured business website with Docker, Golang, React, Bootstrap, PostgreSQL, and a contact form with CI/CD on GitHub.
 
-<details>
+<details open>
 <summary>**Important Git commands**</summary>
 
 Deploy and update on the server: `npm run deploy`
