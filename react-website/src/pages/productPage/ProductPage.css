@@ -42,13 +42,15 @@ span {
   align-content: space-between;
   align-items: left;
 }
-
-.productListDetails {
+.productListDetailsdiv {
   display: flex;
-  flex-direction: column;
+  height: 360px;
+  width: 300px;
+}
+.productListDetails {
   list-style: none; /* Remove default list styles */
-  align-content: center; /* Start from the top of the container */
-  max-width: 250px;
+  display: inline-block;
+  align-self: flex-end;
 }
 
 .productListDetails:hover {

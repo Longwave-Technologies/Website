@@ -95,20 +95,22 @@ const ProductList = ({ products, updatePopup }) => {
       ) : (
         <div className="productList">
           {filteredProducts?.map((product) => (
-            <ul
-              className="productListDetails"
-              key={product.id}
-              onClick={() => handleSelectProduct({ product })}
-              style={{ cursor: "pointer" }}
-            >
-              <li>
-                <img src={images(product.image_path)} alt="images" />
-              </li>
-              <li>
-                {product.brand} {product.subCategory}
-              </li>
-              <li>{product.modelnum}</li>
-            </ul>
+            <div className="productListDetailsdiv">
+              <ul
+                className="productListDetails"
+                key={product.id}
+                onClick={() => handleSelectProduct({ product })}
+                style={{ cursor: "pointer" }}
+              >
+                <li>
+                  <img src={images(product.image_path)} alt="images" />
+                </li>
+                <li>
+                  {product.brand} {product.subCategory}
+                </li>
+                <li>{product.modelnum}</li>
+              </ul>
+            </div>
           ))}
         </div>
       )}
