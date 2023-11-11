@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.df4b1855.css",
-    "main.js": "/static/js/main.0d12c102.js",
+    "main.js": "/static/js/main.5e885613.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/mx_m4051_full_beauty.png": "/static/media/mx_m4051_full_beauty.63c0a94f29db63562ee4.png",
     "static/media/mx_m4051_full_front.png": "/static/media/mx_m4051_full_front.53c59978f0cd9f931e3f.png",
@@ -25,6 +25,7 @@
     "static/media/ecosys-p8060cdn.png": "/static/media/ecosys-p8060cdn.512f33ae365e73009619.png",
     "static/media/taskalfa-508ci.png": "/static/media/taskalfa-508ci.81bfcbc90faa15a91ddb.png",
     "static/media/MX-B427PW.png": "/static/media/MX-B427PW.8100178b5c29014f41e1.png",
+    "static/media/e-studio-400ac.png": "/static/media/e-studio-400ac.f6c285ff714bda3ebeee.png",
     "static/media/MX-3071.png": "/static/media/MX-3071.3d8564fa5fbb52deced7.png",
     "static/media/taskalfa-4012i.png": "/static/media/taskalfa-4012i.8a15e124a48c697a6576.png",
     "static/media/MX-C507P.png": "/static/media/MX-C507P.b9e7c416a9918a387726.png",
@@ -74,12 +75,20 @@
     "static/media/ecosys-ma5500ifx.png": "/static/media/ecosys-ma5500ifx.c61ef6f79b48e34d2ea6.png",
     "static/media/MX-B467F.png": "/static/media/MX-B467F.3916a5a48167ec40e459.png",
     "static/media/ecosys-ma4500ifx.png": "/static/media/ecosys-ma4500ifx.612883ae219595bbfd8f.png",
+    "static/media/e-studio-8518.png": "/static/media/e-studio-8518.59eb0a70859d46c5c51e.png",
     "static/media/MX-M6050.png": "/static/media/MX-M6050.722a35d05f9a59fb4f97.png",
+    "static/media/e-studio-9029.png": "/static/media/e-studio-9029.0d3daac1c0f399495ba6.png",
+    "static/media/e-studio-2520.png": "/static/media/e-studio-2520.f4860c15ddcbe1645c5e.png",
+    "static/media/e-studio-7527.png": "/static/media/e-studio-7527.e0177bea528c58cd7b1b.png",
+    "static/media/e-studio-7516.png": "/static/media/e-studio-7516.cacc1be366d7c6d10523.png",
     "static/media/ecosys-pa2100cwx.png": "/static/media/ecosys-pa2100cwx.b39c69c31ee9f6f4763b.png",
     "static/media/ecosys-m5526cdw.png": "/static/media/ecosys-m5526cdw.b026e32e020c3df285be.png",
+    "static/media/e-studio-6528.png": "/static/media/e-studio-6528.f033e5f948525e89d12c.png",
     "static/media/MX-C304WH.png": "/static/media/MX-C304WH.3ab1da1caf3e0a4a9f03.png",
+    "static/media/e-studio-6525.png": "/static/media/e-studio-6525.24824cfbfa2e51e84390.png",
     "static/media/imagerunner_advance_6255.png": "/static/media/imagerunner_advance_6255.1b35209ca89530bda4cc.png",
     "static/media/bizhub-650i.png": "/static/media/bizhub-650i.f744cf3c74f8812a6380.png",
+    "static/media/e-studio-2822am.png": "/static/media/e-studio-2822am.4d3995e81675e1cdbda5.png",
     "static/media/bizhub-c3320i.png": "/static/media/bizhub-c3320i.b164b3b4d86fda185193.png",
     "static/media/bizhub-5020i.png": "/static/media/bizhub-5020i.4a219313e2213e48766d.png",
     "static/media/imagerunner_advance_c5500i_iii.png": "/static/media/imagerunner_advance_c5500i_iii.70d5b56ec9a7c455c49d.png",
@@ -94,6 +103,7 @@
     "static/media/hp.png": "/static/media/hp.840aed0a02b22087a748.png",
     "static/media/bizhub-227.png": "/static/media/bizhub-227.cabb6f3694be4e5c2634.png",
     "static/media/MX-B376W.png": "/static/media/MX-B376W.63ae003abcf159a3cc03.png",
+    "static/media/e-studio-2829a.png": "/static/media/e-studio-2829a.b9715a418fec5e5d3f70.png",
     "static/media/BP-50M26.png": "/static/media/BP-50M26.2003e493ab8adfad67bd.png",
     "static/media/nec.png": "/static/media/nec.267087a396e2dd64821e.png",
     "static/media/xerox.png": "/static/media/xerox.409e3cf1b4aa519003e7.png",
@@ -108,11 +118,11 @@
     "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
     "main.df4b1855.css.map": "/static/css/main.df4b1855.css.map",
-    "main.0d12c102.js.map": "/static/js/main.0d12c102.js.map",
+    "main.5e885613.js.map": "/static/js/main.5e885613.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df4b1855.css",
-    "static/js/main.0d12c102.js"
+    "static/js/main.5e885613.js"
   ]
 }
