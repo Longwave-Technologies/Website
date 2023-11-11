@@ -52,6 +52,11 @@ span {
   display: inline-block;
   align-self: flex-end;
 }
+.prod_modelnum {
+  word-wrap: break-word;
+  max-width: 270px;
+  white-space: initial;
+}
 
 .productListDetails:hover {
   background-color: rgba(1, 77, 153, 0.1);

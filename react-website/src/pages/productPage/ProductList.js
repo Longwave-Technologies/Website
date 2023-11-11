@@ -108,7 +108,7 @@ const ProductList = ({ products, updatePopup }) => {
                 <li>
                   {product.brand} {product.subCategory}
                 </li>
-                <li>{product.modelnum}</li>
+                <li className="prod_modelnum">{product.modelnum}</li>
               </ul>
             </div>
           ))}
