@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.df4b1855.css",
-    "main.js": "/static/js/main.5e885613.js",
+    "main.css": "/static/css/main.c026841e.css",
+    "main.js": "/static/js/main.b306e0c4.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/mx_m4051_full_beauty.png": "/static/media/mx_m4051_full_beauty.63c0a94f29db63562ee4.png",
     "static/media/mx_m4051_full_front.png": "/static/media/mx_m4051_full_front.53c59978f0cd9f931e3f.png",
@@ -117,12 +117,12 @@
     "static/media/kyocera.png": "/static/media/kyocera.5e2c2741fa8199d172ff.png",
     "static/media/brother.png": "/static/media/brother.13b4371edbbe15f9a531.png",
     "index.html": "/index.html",
-    "main.df4b1855.css.map": "/static/css/main.df4b1855.css.map",
-    "main.5e885613.js.map": "/static/js/main.5e885613.js.map",
+    "main.c026841e.css.map": "/static/css/main.c026841e.css.map",
+    "main.b306e0c4.js.map": "/static/js/main.b306e0c4.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df4b1855.css",
-    "static/js/main.5e885613.js"
+    "static/css/main.c026841e.css",
+    "static/js/main.b306e0c4.js"
   ]
 }
